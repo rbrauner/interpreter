@@ -5,3 +5,8 @@ CONFIG -= qt
 
 unix|win32: LIBS += -lgtest
 unix|win32: LIBS += -lgtest_main
+
+HEADERS += \
+    src/interpreter.h
+
+SOURCES +=
