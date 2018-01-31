@@ -1,6 +1,8 @@
 #ifndef ADDRESS_H
 #define ADDRESS_H
 
+#include <string>
+
 namespace interpreter {
 namespace address {
     class Address {
@@ -9,10 +11,14 @@ namespace address {
 
     class Position {
     public:
+        virtual std::string to_dec() = 0;
+        virtual std::string to_hex() = 0;
     };
 
     class Value {
     public:
+        virtual std::string to_dec() = 0;
+        virtual std::string to_hex() = 0;
     };
 } // namespace address
 } // namespace interpreter
