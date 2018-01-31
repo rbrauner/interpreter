@@ -1,7 +1,7 @@
 #ifndef INTERPRETER_H
 #define INTERPRETER_H
 
-#include "instruction.h"
+#include "instructions.h"
 #include <memory>
 
 namespace interpreter {

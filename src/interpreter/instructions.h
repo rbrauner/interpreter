@@ -4,7 +4,7 @@
 #include "buffer.h"
 
 namespace interpreter {
-namespace instruction {
+namespace instructions {
     class Instruction {
     public:
         virtual void exectute() = 0;
