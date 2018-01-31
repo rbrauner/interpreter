@@ -8,6 +8,7 @@ unix|win32: LIBS += -lgtest_main
 
 HEADERS += \
     src/interpreter.h \
-    src/memory.h
+    src/memory.h \
+    src/address.h
 
 SOURCES +=
