@@ -10,4 +10,5 @@ HEADERS += \
     src/interpreter/address.h \
     src/interpreter/buffer.h \
     src/interpreter/interpreter.h \
-    src/interpreter/memory.h
+    src/interpreter/memory.h \
+    src/interpreter/instruction.h
