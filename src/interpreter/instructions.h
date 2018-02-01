@@ -25,10 +25,6 @@ namespace instructions {
     };
 
     template <typename T>
-    class Pre_formatted_instructions_buffer : public buffer::FIFO_buffer<T> {
-    };
-
-    template <typename T>
     class Instructions_buffer : public buffer::FIFO_buffer<T> {
     };
 } // namespace instruction
