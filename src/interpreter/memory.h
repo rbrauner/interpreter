@@ -1,21 +1,23 @@
-#ifndef MEMORY_H
-#define MEMORY_H
+#ifndef INTERPRETER_MEMORY_H
+#define INTERPRETER_MEMORY_H
 
-#include "address.h"
+#include "interpreter/address.h"
 
 namespace interpreter {
-namespace memory {
-    class Memory {
-    public:
-        virtual void clear() = 0;
-    };
+namespace interpreter {
+    namespace memory {
+        class Memory {
+        public:
+            virtual void clear() = 0;
+        };
 
-    class Memory_pointer {
-    public:
-        virtual address::Value* get_value() = 0;
-        virtual address::Position* get_position() = 0;
-    };
-} // namespace memory
+        class Memory_pointer {
+        public:
+            virtual address::Value* get_value() = 0;
+            virtual address::Position* get_position() = 0;
+        };
+    } // namespace memory
+} // namespace interpreter
 } // namespace interpreter
 
-#endif // MEMORY_H
+#endif // INTERPRETER_MEMORY_H
