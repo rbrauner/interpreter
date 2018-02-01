@@ -14,6 +14,9 @@ namespace interpreter {
 
         template <typename T>
         class Instructions_set {
+            using Instruction_pointer = std::shared_ptr<Instruction>;
+            using Instructions_set_pointer = std::shared_ptr<Instructions_set<T>>;
+
         public:
             virtual void add_instruction(T instruction) = 0;
             virtual void remove_instruction(int number) = 0;
@@ -22,10 +25,6 @@ namespace interpreter {
             virtual int size() = 0;
             virtual Instruction_pointer get_instruction(int number) = 0;
             virtual Instructions_set_pointer get_instructions_set(int from, int to) = 0;
-
-        private:
-            using Instruction_pointer = std::shared_ptr<Instruction>;
-            using Instructions_set_pointer = std::shared_ptr<Instructions_set<T>>;
         };
 
         template <typename T>
