@@ -12,12 +12,14 @@ namespace interpreter {
 
         class Position {
         public:
+            virtual ~Position() = 0;
             virtual std::string to_dec() = 0;
             virtual std::string to_hex() = 0;
         };
 
         class Value {
         public:
+            virtual ~Value() = 0;
             virtual std::string to_dec() = 0;
             virtual std::string to_hex() = 0;
         };
