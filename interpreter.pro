@@ -20,4 +20,8 @@ HEADERS += \
     src/interpreter/instructions/instruction.h \
     src/interpreter/instructions/instructions_set.h \
     src/interpreter/instructions/instructions_buffer.h \
-    src/interpreter/memory/memory_pointer.h
+    src/interpreter/memory/memory_pointer.h \
+    src/brainfuck_impl/interpreter/interpreter.h
+
+SOURCES += \
+    src/brainfuck_impl/interpreter/interpreter.cpp
