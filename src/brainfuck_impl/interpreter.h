@@ -11,6 +11,7 @@ namespace brainfuck {
             using Instructions_set_pointer = std::shared_ptr<::interpreter::interpreter::instructions::Instructions_set<std::string>>;
 
         public:
+            ~Interpreter();
             void add_instructions_set(Instructions_set_pointer instructions_set);
             void interpret(int how_many);
             void interpret(Instructions_set_pointer instructions_set);
