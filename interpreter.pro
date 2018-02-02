@@ -9,12 +9,15 @@ unix|win32: LIBS += -lgtest_main
 INCLUDEPATH += src
 
 HEADERS += \
-    src/brainfuck_impl/interpreter.h \
-    src/interpreter/address.h \
-    src/interpreter/buffer.h \
-    src/interpreter/instructions.h \
-    src/interpreter/interpreter.h \
-    src/interpreter/memory.h
-
-SOURCES += \
-    src/brainfuck_impl/interpreter.cpp
+    src/interpreter/address/address.h \
+    src/interpreter/buffer/buffer.h \
+    src/interpreter/address/address.h \
+    src/interpreter/buffer/buffer.h \
+    src/interpreter/interpreter/interpreter.h \
+    src/interpreter/memory/memory.h \
+    src/interpreter/address/position.h \
+    src/interpreter/address/value.h \
+    src/interpreter/instructions/instruction.h \
+    src/interpreter/instructions/instructions_set.h \
+    src/interpreter/instructions/instructions_buffer.h \
+    src/interpreter/memory/memory_pointer.h
