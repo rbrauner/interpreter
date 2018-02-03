@@ -20,8 +20,22 @@ HEADERS += \
     src/interpreter/memory/memory.h \
     src/interpreter/memory/memory_pointer.h \
     src/brainfuck_impl/interpreter/interpreter.h \
-    src/brainfuck_impl/address/address.h
+    src/brainfuck_impl/address/address.h \
+    src/brainfuck_impl/address/position.h \
+    src/brainfuck_impl/address/value.h \
+    src/brainfuck_impl/instructions/instructions_buffer.h \
+    src/brainfuck_impl/instructions/instructions_set.h \
+    src/brainfuck_impl/instructions/instruction.h \
+    src/brainfuck_impl/memory/memory.h \
+    src/brainfuck_impl/memory/memory_pointer.h
 
 SOURCES += \
     src/brainfuck_impl/interpreter/interpreter.cpp \
-    src/brainfuck_impl/address/address.cpp
+    src/brainfuck_impl/address/address.cpp \
+    src/brainfuck_impl/address/position.cpp \
+    src/brainfuck_impl/address/value.cpp \
+    src/brainfuck_impl/instructions/instructions_buffer.cpp \
+    src/brainfuck_impl/instructions/instructions_set.cpp \
+    src/brainfuck_impl/instructions/instruction.cpp \
+    src/brainfuck_impl/memory/memory.cpp \
+    src/brainfuck_impl/memory/memory_pointer.cpp
