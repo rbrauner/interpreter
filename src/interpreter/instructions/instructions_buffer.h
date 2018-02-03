@@ -6,8 +6,10 @@
 namespace interpreter {
 namespace interpreter {
 namespace instructions {
+
 template <typename T>
 class Instructions_buffer : public buffer::FIFO_buffer<T> {};
+
 } // namespace instructions
 } // namespace interpreter
 } // namespace interpreter

@@ -7,6 +7,7 @@
 namespace interpreter {
 namespace interpreter {
 namespace instructions {
+
 template <typename T> class Instructions_set {
   using Instruction_pointer = std::shared_ptr<Instruction>;
   using Instructions_set_pointer = std::shared_ptr<Instructions_set<T>>;
@@ -22,6 +23,7 @@ public:
   virtual Instruction_pointer get_instruction(int number) = 0;
   virtual Instructions_set_pointer get_instructions_set(int from, int to) = 0;
 };
+
 } // namespace instructions
 } // namespace interpreter
 } // namespace interpreter

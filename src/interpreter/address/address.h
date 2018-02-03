@@ -4,9 +4,11 @@
 namespace interpreter {
 namespace interpreter {
 namespace address {
+
 class Address {
 public:
 };
+
 } // namespace address
 } // namespace interpreter
 } // namespace interpreter
