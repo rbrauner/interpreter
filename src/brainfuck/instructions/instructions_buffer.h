@@ -1,7 +1,7 @@
 #ifndef INSTRUCTIONS_BUFFER_H
 #define INSTRUCTIONS_BUFFER_H
 
-#include "brainfuck_impl/instructions/instruction.h"
+#include "brainfuck/instructions/instruction.h"
 #include "interpreter/instructions/instructions_buffer.h"
 #include <memory>
 

@@ -1,7 +1,7 @@
 #ifndef INSTRUCTIONS_SET_H
 #define INSTRUCTIONS_SET_H
 
-#include "brainfuck_impl/instructions/instruction.h"
+#include "brainfuck/instructions/instruction.h"
 #include "interpreter/instructions/instructions_set.h"
 
 namespace interpreter {
