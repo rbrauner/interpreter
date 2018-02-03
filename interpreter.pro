@@ -19,7 +19,9 @@ HEADERS += \
     src/interpreter/interpreter/interpreter.h \
     src/interpreter/memory/memory.h \
     src/interpreter/memory/memory_pointer.h \
-    src/brainfuck_impl/interpreter/interpreter.h
+    src/brainfuck_impl/interpreter/interpreter.h \
+    src/brainfuck_impl/address/address.h
 
 SOURCES += \
-    src/brainfuck_impl/interpreter/interpreter.cpp
+    src/brainfuck_impl/interpreter/interpreter.cpp \
+    src/brainfuck_impl/address/address.cpp
