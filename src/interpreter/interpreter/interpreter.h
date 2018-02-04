@@ -8,9 +8,9 @@ namespace interpreter {
 namespace interpreter {
 namespace interpreter {
 
-template <typename T> class Interpreter {
+template<typename T> class Interpreter {
   using Instructions_set_pointer =
-      std::shared_ptr<instructions::Instructions_set<T>>;
+  std::shared_ptr<instructions::Instructions_set<T>>;
 
 public:
   virtual ~Interpreter() = 0;

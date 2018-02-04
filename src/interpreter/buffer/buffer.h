@@ -7,7 +7,7 @@ namespace interpreter {
 namespace interpreter {
 namespace buffer {
 
-template <typename T> class FIFO_buffer {
+template<typename T> class FIFO_buffer {
 public:
   virtual ~FIFO_buffer() = 0;
   virtual void push_back(T instruction) = 0;

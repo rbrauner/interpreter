@@ -7,7 +7,9 @@ namespace interpreter {
 namespace brainfuck {
 namespace address {
 
-class Address : public ::interpreter::interpreter::address::Address {};
+class Address : public ::interpreter::interpreter::address::Address {
+
+};
 
 } // namespace address
 } // namespace brainfuck

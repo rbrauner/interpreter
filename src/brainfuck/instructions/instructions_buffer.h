@@ -9,9 +9,8 @@ namespace interpreter {
 namespace brainfuck {
 namespace instructions {
 
-template <typename T = std::shared_ptr<Instruction>>
-class Instructions_buffer
-    : public ::interpreter::interpreter::instructions::Instructions_buffer<T> {
+template<typename T = std::shared_ptr<Instruction>>
+class Instructions_buffer : public ::interpreter::interpreter::instructions::Instructions_buffer<T> {
 public:
   void push_back(T instruction);
   void push_back(std::initializer_list<T> instructions);

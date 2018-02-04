@@ -7,8 +7,7 @@ namespace interpreter {
 namespace brainfuck {
 namespace instructions {
 
-class Instruction
-    : public ::interpreter::interpreter::instructions::Instruction {
+class Instruction : public ::interpreter::interpreter::instructions::Instruction {
 public:
   void exectute();
 };

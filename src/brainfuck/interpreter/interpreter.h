@@ -8,10 +8,8 @@ namespace interpreter {
 namespace brainfuck {
 namespace interpreter {
 
-class Interpreter
-    : public ::interpreter::interpreter::interpreter::Interpreter<std::string> {
-  using Instructions_set_pointer = std::shared_ptr<
-      ::interpreter::interpreter::instructions::Instructions_set<std::string>>;
+class Interpreter : public ::interpreter::interpreter::interpreter::Interpreter<std::string> {
+  using Instructions_set_pointer = std::shared_ptr<::interpreter::interpreter::instructions::Instructions_set<std::string>>;
 
 public:
   ~Interpreter();

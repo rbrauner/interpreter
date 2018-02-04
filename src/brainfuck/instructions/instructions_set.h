@@ -8,9 +8,8 @@ namespace interpreter {
 namespace brainfuck {
 namespace instructions {
 
-template <typename T = std::shared_ptr<Instruction>>
-class Instructions_set
-    : public ::interpreter::interpreter::instructions::Instructions_set<T> {
+template<typename T = std::shared_ptr<Instruction>>
+class Instructions_set : public ::interpreter::interpreter::instructions::Instructions_set<T> {
   using Instruction_pointer = std::shared_ptr<Instruction>;
   using Instructions_set_pointer = std::shared_ptr<Instructions_set<T>>;
 

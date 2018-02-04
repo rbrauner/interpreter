@@ -8,7 +8,7 @@ namespace interpreter {
 namespace interpreter {
 namespace instructions {
 
-template <typename T> class Instructions_set {
+template<typename T> class Instructions_set {
   using Instruction_pointer = std::shared_ptr<Instruction>;
   using Instructions_set_pointer = std::shared_ptr<Instructions_set<T>>;
 
