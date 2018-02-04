@@ -35,4 +35,5 @@ add_executable(interpreter
   src/interpreter/memory/memory.h
   src/interpreter/memory/memory_pointer.h)
 
-link_libraries(interpreter gtest_main)
+target_link_libraries(interpreter gtest)
+target_link_libraries(interpreter gtest_main)
