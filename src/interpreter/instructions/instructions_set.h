@@ -1,5 +1,4 @@
-#ifndef INTERPRETER_INSTRUCTIONS_SET_H
-#define INTERPRETER_INSTRUCTIONS_SET_H
+#pragma once
 
 #include "interpreter/instructions/instruction.h"
 #include <memory>
@@ -24,8 +23,6 @@ public:
   virtual Instructions_set_pointer get_instructions_set(int from, int to) = 0;
 };
 
-} // namespace instructions
-} // namespace interpreter
-} // namespace interpreter
-
-#endif // INTERPRETER_INSTRUCTIONS_SET_H
+}
+}
+}

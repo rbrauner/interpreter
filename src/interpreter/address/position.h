@@ -1,5 +1,4 @@
-#ifndef INTERPRETER_POSITION_H
-#define INTERPRETER_POSITION_H
+#pragma once
 
 #include <string>
 
@@ -14,8 +13,6 @@ public:
   virtual std::string to_hex() = 0;
 };
 
-} // namespace address
-} // namespace interpreter
-} // namespace interpreter
-
-#endif // INTERPRETER_POSITION_H
+}
+}
+}

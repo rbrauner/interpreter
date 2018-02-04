@@ -1,5 +1,4 @@
-#ifndef INSTRUCTIONS_BUFFER_H
-#define INSTRUCTIONS_BUFFER_H
+#pragma once
 
 #include "brainfuck/instructions/instruction.h"
 #include "interpreter/instructions/instructions_buffer.h"
@@ -17,8 +16,6 @@ public:
   std::initializer_list<T> pull_from_begin(int how_many);
 };
 
-} // namespace instructions
-} // namespace brainfuck
-} // namespace interpreter
-
-#endif // INSTRUCTIONS_BUFFER_H
+}
+}
+}

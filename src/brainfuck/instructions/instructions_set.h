@@ -1,5 +1,4 @@
-#ifndef INSTRUCTIONS_SET_H
-#define INSTRUCTIONS_SET_H
+#pragma once
 
 #include "brainfuck/instructions/instruction.h"
 #include "interpreter/instructions/instructions_set.h"
@@ -24,8 +23,6 @@ public:
   Instructions_set_pointer get_instructions_set(int from, int to);
 };
 
-} // namespace instructions
-} // namespace brainfuck
-} // namespace interpreter
-
-#endif // INSTRUCTIONS_SET_H
+}
+}
+}

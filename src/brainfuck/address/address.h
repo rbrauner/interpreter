@@ -1,5 +1,4 @@
-#ifndef ADDRESS_H
-#define ADDRESS_H
+#pragma once
 
 #include "interpreter/address/address.h"
 
@@ -11,8 +10,6 @@ class Address : public ::interpreter::interpreter::address::Address {
 
 };
 
-} // namespace address
-} // namespace brainfuck
-} // namespace interpreter
-
-#endif // ADDRESS_H
+}
+}
+}

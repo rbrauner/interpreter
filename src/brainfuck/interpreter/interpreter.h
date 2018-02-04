@@ -1,5 +1,4 @@
-#ifndef BRAINFUCK_INTERPRETER_H
-#define BRAINFUCK_INTERPRETER_H
+#pragma once
 
 #include "interpreter/interpreter/interpreter.h"
 #include <string>
@@ -18,8 +17,6 @@ public:
   void interpret(Instructions_set_pointer instructions_set);
 };
 
-} // namespace interpreter
-} // namespace brainfuck
-} // namespace interpreter
-
-#endif // BRAINFUCK_INTERPRETER_H
+}
+}
+}

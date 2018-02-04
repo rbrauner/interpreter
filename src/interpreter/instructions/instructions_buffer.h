@@ -1,5 +1,4 @@
-#ifndef INTERPRETER_INSTRUCTIONS_BUFFER_H
-#define INTERPRETER_INSTRUCTIONS_BUFFER_H
+#pragma once
 
 #include "interpreter/buffer/buffer.h"
 
@@ -10,8 +9,6 @@ namespace instructions {
 template<typename T>
 class Instructions_buffer : public buffer::FIFO_buffer<T> {};
 
-} // namespace instructions
-} // namespace interpreter
-} // namespace interpreter
-
-#endif // INTERPRETER_INSTRUCTIONS_BUFFER_H
+}
+}
+}

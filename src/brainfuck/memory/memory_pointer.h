@@ -1,5 +1,4 @@
-#ifndef MEMORY_POINTER_H
-#define MEMORY_POINTER_H
+#pragma once
 
 #include "interpreter/memory/memory_pointer.h"
 
@@ -13,8 +12,6 @@ public:
   interpreter::address::Position *get_position();
 };
 
-} // namespace memory
-} // namespace brainfuck
-} // namespace interpreter
-
-#endif // MEMORY_POINTER_H
+}
+}
+}

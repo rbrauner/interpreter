@@ -1,5 +1,4 @@
-#ifndef INTERPRETER_INTERPRETER_H
-#define INTERPRETER_INTERPRETER_H
+#pragma once
 
 #include "interpreter/instructions/instructions_set.h"
 #include <memory>
@@ -20,8 +19,6 @@ public:
   virtual void interpret(Instructions_set_pointer instructions_set) = 0;
 };
 
-} // namespace interpreter
-} // namespace interpreter
-} // namespace interpreter
-
-#endif // INTERPRETER_INTERPRETER_H
+}
+}
+}

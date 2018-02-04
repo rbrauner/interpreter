@@ -1,5 +1,4 @@
-#ifndef INTERPRETER_INSTRUCTION_H
-#define INTERPRETER_INSTRUCTION_H
+#pragma once
 
 namespace interpreter {
 namespace interpreter {
@@ -11,8 +10,6 @@ public:
   virtual void exectute() = 0;
 };
 
-} // namespace instructions
-} // namespace interpreter
-} // namespace interpreter
-
-#endif // INTERPRETER_INSTRUCTION_H
+}
+}
+}

@@ -1,5 +1,4 @@
-#ifndef INTERPRETER_MEMORY_POINTER_H
-#define INTERPRETER_MEMORY_POINTER_H
+#pragma once
 
 #include "interpreter/address/position.h"
 #include "interpreter/address/value.h"
@@ -15,8 +14,6 @@ public:
   virtual address::Position *get_position() = 0;
 };
 
-} // namespace memory
-} // namespace interpreter
-} // namespace interpreter
-
-#endif // INTERPRETER_MEMORY_POINTER_H
+}
+}
+}

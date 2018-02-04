@@ -1,5 +1,4 @@
-#ifndef INSTRUCTION_H
-#define INSTRUCTION_H
+#pragma once
 
 #include "interpreter/instructions/instruction.h"
 
@@ -12,8 +11,6 @@ public:
   void exectute();
 };
 
-} // namespace instructions
-} // namespace brainfuck
-} // namespace interpreter
-
-#endif // INSTRUCTION_H
+}
+}
+}

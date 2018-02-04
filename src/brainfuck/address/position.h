@@ -1,5 +1,4 @@
-#ifndef POSITION_H
-#define POSITION_H
+#pragma once
 
 #include "interpreter/address/position.h"
 
@@ -13,8 +12,6 @@ public:
   std::string to_hex();
 };
 
-} // namespace address
-} // namespace brainfuck
-} // namespace interpreter
-
-#endif // POSITION_H
+}
+}
+}

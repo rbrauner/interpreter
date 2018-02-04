@@ -1,5 +1,4 @@
-#ifndef INTERPRETER_ADDRESS_H
-#define INTERPRETER_ADDRESS_H
+#pragma once
 
 namespace interpreter {
 namespace interpreter {
@@ -9,8 +8,6 @@ class Address {
 public:
 };
 
-} // namespace address
-} // namespace interpreter
-} // namespace interpreter
-
-#endif // INTERPRETER_ADDRESS_H
+}
+}
+}

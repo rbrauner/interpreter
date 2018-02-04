@@ -1,5 +1,4 @@
-#ifndef MEMORY_H
-#define MEMORY_H
+#pragma once
 
 #include "interpreter/memory/memory.h"
 
@@ -12,8 +11,6 @@ public:
   void clear();
 };
 
-} // namespace memory
-} // namespace brainfuck
-} // namespace interpreter
-
-#endif // MEMORY_H
+}
+}
+}

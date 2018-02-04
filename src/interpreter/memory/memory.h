@@ -1,5 +1,4 @@
-#ifndef INTERPRETER_MEMORY_H
-#define INTERPRETER_MEMORY_H
+#pragma once
 
 namespace interpreter {
 namespace interpreter {
@@ -11,8 +10,6 @@ public:
   virtual void clear() = 0;
 };
 
-} // namespace memory
-} // namespace interpreter
-} // namespace interpreter
-
-#endif // INTERPRETER_MEMORY_H
+}
+}
+}

@@ -1,5 +1,4 @@
-#ifndef VALUE_H
-#define VALUE_H
+#pragma once
 
 #include "interpreter/address/value.h"
 
@@ -13,8 +12,6 @@ public:
   std::string to_hex();
 };
 
-} // namespace address
-} // namespace brainfuck
-} // namespace interpreter
-
-#endif // VALUE_H
+}
+}
+}

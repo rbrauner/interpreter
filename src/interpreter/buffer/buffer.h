@@ -1,5 +1,4 @@
-#ifndef INTERPRETER_BUFFER_H
-#define INTERPRETER_BUFFER_H
+#pragma once
 
 #include <initializer_list>
 
@@ -15,8 +14,6 @@ public:
   virtual std::initializer_list<T> pull_from_begin(int how_many) = 0;
 };
 
-} // namespace buffer
-} // namespace interpreter
-} // namespace interpreter
-
-#endif // INTERPRETER_BUFFER_H
+}
+}
+}
