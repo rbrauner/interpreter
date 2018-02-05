@@ -6,6 +6,7 @@ namespace address {
 
 class Address {
 public:
+  virtual ~Address() = 0;
 };
 
 }
