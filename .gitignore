@@ -70,7 +70,3 @@ Thumbs.db
 # --------
 *.dll
 *.exe
-
-# My
-.idea
-cmake-build-debug
