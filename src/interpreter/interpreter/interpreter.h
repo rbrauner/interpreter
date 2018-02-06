@@ -1,22 +1,23 @@
 #pragma once
 
-#include "interpreter/instructions/instructions_set.h"
+#include "interpreter/instructions/instructionsset.h"
 #include <memory>
 
 namespace interpreter {
 namespace interpreter {
 namespace interpreter {
 
-template<typename T> class Interpreter {
+template <typename T> class Interpreter {
 public:
-  using Instructions_set_pointer = std::shared_ptr<instructions::Instructions_set<T>>;
+  using InstructionsSetPointer =
+      std::shared_ptr<instructions::InstructionsSet<T>>;
 
   virtual ~Interpreter() = 0;
-  virtual void add_instructions_set(Instructions_set_pointer instructions_set) = 0;
-  virtual void interpret(int how_many) = 0;
-  virtual void interpret(Instructions_set_pointer instructions_set) = 0;
+  virtual void addInstructionsSet(InstructionsSetPointer instructionsSet) = 0;
+  virtual void interpret(int howMany) = 0;
+  virtual void interpret(InstructionsSetPointer instructionsSet) = 0;
 };
 
-}
-}
-}
+} // namespace interpreter
+} // namespace interpreter
+} // namespace interpreter

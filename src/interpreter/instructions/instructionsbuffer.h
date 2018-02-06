@@ -1,14 +1,13 @@
 #pragma once
 
+#include "interpreter/buffer/buffer.h"
+
 namespace interpreter {
 namespace interpreter {
 namespace instructions {
 
-class Instruction {
-public:
-  virtual ~Instruction() = 0;
-  virtual void exectute() = 0;
-};
+template <typename T>
+class InstructionsBuffer : public buffer::FifoBuffer<T> {};
 
 } // namespace instructions
 } // namespace interpreter

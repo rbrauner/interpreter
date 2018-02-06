@@ -9,6 +9,6 @@ public:
   virtual ~Address() = 0;
 };
 
-}
-}
-}
+} // namespace address
+} // namespace interpreter
+} // namespace interpreter

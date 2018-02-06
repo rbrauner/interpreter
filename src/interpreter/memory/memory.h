@@ -10,6 +10,6 @@ public:
   virtual void clear() = 0;
 };
 
-}
-}
-}
+} // namespace memory
+} // namespace interpreter
+} // namespace interpreter

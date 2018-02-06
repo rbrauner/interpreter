@@ -9,10 +9,10 @@ namespace address {
 class Value {
 public:
   virtual ~Value() = 0;
-  virtual std::string to_dec() = 0;
-  virtual std::string to_hex() = 0;
+  virtual std::string toDec() = 0;
+  virtual std::string toHex() = 0;
 };
 
-}
-}
-}
+} // namespace address
+} // namespace interpreter
+} // namespace interpreter
