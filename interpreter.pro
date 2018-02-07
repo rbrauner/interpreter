@@ -26,7 +26,6 @@ HEADERS += \
     src/brainfuck/memory/memory.h \
     src/brainfuck/memory/memory_pointer.h \
     src/interpreter/instructions/instructionsbuffer.h \
-    src/interpreter/instructions/instructionsset.h \
     src/interpreter/memory/memorypointer.h
 
 SOURCES += \
