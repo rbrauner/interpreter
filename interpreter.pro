@@ -18,7 +18,13 @@ HEADERS += \
     src/interpreter/memory/memory.h \
     src/interpreter/memory/memorypointer.h \
     src/utilites/buffer/buffer.h \
-    src/utilites/number/number.h
+    src/utilites/number/number.h \
+    src/utilites/number/binary.h \
+    src/utilites/number/decimal.h \
+    src/utilites/number/hexadecimal.h
 
 SOURCES += \
-    src/utilites/number/number.cpp
+    src/utilites/number/number.cpp \
+    src/utilites/number/binary.cpp \
+    src/utilites/number/decimal.cpp \
+    src/utilites/number/hexadecimal.cpp
