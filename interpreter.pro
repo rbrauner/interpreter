@@ -26,7 +26,8 @@ HEADERS += \
     src/brainfuck/memory/memory.h \
     src/brainfuck/memory/memory_pointer.h \
     src/interpreter/instructions/instructionsbuffer.h \
-    src/interpreter/memory/memorypointer.h
+    src/interpreter/memory/memorypointer.h \
+    src/interpreter/number/number.h
 
 SOURCES += \
     src/brainfuck/address/address.cpp \
@@ -37,4 +38,5 @@ SOURCES += \
     src/brainfuck/instructions/instructions_set.cpp \
     src/brainfuck/interpreter/interpreter.cpp \
     src/brainfuck/memory/memory.cpp \
-    src/brainfuck/memory/memory_pointer.cpp
+    src/brainfuck/memory/memory_pointer.cpp \
+    src/interpreter/number/number.cpp
