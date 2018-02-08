@@ -3,7 +3,7 @@
 #include <initializer_list>
 
 namespace interpreter {
-namespace interpreter {
+namespace utilities {
 namespace buffer {
 
 template <typename T> class FifoBuffer {
@@ -16,5 +16,5 @@ public:
 };
 
 } // namespace buffer
-} // namespace interpreter
+} // namespace utilities
 } // namespace interpreter

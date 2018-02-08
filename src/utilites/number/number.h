@@ -4,7 +4,7 @@
 #include <string>
 
 namespace interpreter {
-namespace interpreter {
+namespace utilities {
 namespace number {
 
 class Number {
@@ -17,5 +17,5 @@ public:
 };
 
 } // namespace number
-} // namespace interpreter
+} // namespace utilities
 } // namespace interpreter
