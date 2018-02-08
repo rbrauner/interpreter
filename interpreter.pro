@@ -25,7 +25,6 @@ HEADERS += \
     tests/utilities/number/numbertest.h
 
 SOURCES += \
-    src/utilites/number/number.cpp \
     src/utilites/number/binary.cpp \
     src/utilites/number/decimal.cpp \
     src/utilites/number/hexadecimal.cpp \
