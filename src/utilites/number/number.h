@@ -13,7 +13,7 @@ public:
   virtual std::string getValue() = 0;
   virtual void setValue(std::string) = 0;
 
-  void setNumeralSystem(std::shared_ptr<Number> numeralSystem);
+  virtual void setNumeralSystem(std::shared_ptr<Number> numeralSystem) final;
 };
 
 } // namespace number
