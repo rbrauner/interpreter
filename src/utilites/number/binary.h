@@ -10,6 +10,8 @@ namespace number {
 class Binary : public Number {
 public:
   Binary(std::string value);
+  ~Binary();
+
   std::string getValue();
   void setValue(std::string);
 };

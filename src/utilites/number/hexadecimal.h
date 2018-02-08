@@ -10,6 +10,8 @@ namespace number {
 class Hexadecimal : public Number {
 public:
   Hexadecimal(std::string value);
+  ~Hexadecimal();
+
   std::string getValue();
   void setValue(std::string);
 };

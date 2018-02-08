@@ -11,6 +11,8 @@ class Decimal : public Number {
 public:
   Decimal(std::string value);
   Decimal(int value);
+  ~Decimal();
+
   std::string getValue();
   void setValue(std::string);
 };
