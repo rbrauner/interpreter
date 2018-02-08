@@ -1,6 +1,7 @@
 #pragma once
 
 #include "utilites/number/number.h"
+#include <string>
 
 namespace interpreter {
 namespace utilities {
@@ -8,6 +9,8 @@ namespace number {
 
 class Decimal : public Number {
 public:
+  Decimal(std::string value);
+  Decimal(int value);
   std::string getValue();
   void setValue(std::string);
 };
