@@ -21,10 +21,12 @@ HEADERS += \
     src/utilites/number/number.h \
     src/utilites/number/binary.h \
     src/utilites/number/decimal.h \
-    src/utilites/number/hexadecimal.h
+    src/utilites/number/hexadecimal.h \
+    tests/utilities/number/numbertest.h
 
 SOURCES += \
     src/utilites/number/number.cpp \
     src/utilites/number/binary.cpp \
     src/utilites/number/decimal.cpp \
-    src/utilites/number/hexadecimal.cpp
+    src/utilites/number/hexadecimal.cpp \
+    tests/utilities/number/numbertest.cpp
