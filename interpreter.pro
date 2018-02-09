@@ -22,10 +22,14 @@ HEADERS += \
     src/utilites/number/binary.h \
     src/utilites/number/decimal.h \
     src/utilites/number/hexadecimal.h \
-    tests/utilities/number/numbertest.h
+    tests/utilities/number/numbertest.h \
+    src/utilites/charset/charset.h \
+    tests/utilities/charset/charsettest.h
 
 SOURCES += \
     src/utilites/number/binary.cpp \
     src/utilites/number/decimal.cpp \
     src/utilites/number/hexadecimal.cpp \
-    tests/utilities/number/numbertest.cpp
+    tests/utilities/number/numbertest.cpp \
+    src/utilites/charset/charset.cpp \
+    tests/utilities/charset/charsettest.cpp
