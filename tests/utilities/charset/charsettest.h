@@ -10,6 +10,9 @@ public:
   CharSetTest();
   virtual ~CharSetTest();
 
+  void checkIfAllCharsFromScopeExists();
+  void checkIfCharsOutOfScopeNotExists();
+
 protected:
   CharSet bin;
   CharSet dec;
