@@ -1,9 +1,9 @@
 #pragma once
 
-#include "utilites/number/binary.h"
-#include "utilites/number/decimal.h"
-#include "utilites/number/hexadecimal.h"
-#include "utilites/number/number.h"
+#include "interpreter/utilites/number/binary.h"
+#include "interpreter/utilites/number/decimal.h"
+#include "interpreter/utilites/number/hexadecimal.h"
+#include "interpreter/utilites/number/number.h"
 #include "gtest/gtest.h"
 #include <memory>
 

@@ -1,22 +1,23 @@
 #pragma once
 
-#include "utilites/number/number.h"
+#include "interpreter/utilites/number/number.h"
 #include <string>
 
 namespace interpreter {
 namespace utilities {
 namespace number {
 
-class Binary : public Number {
+class Decimal : public Number {
 public:
-  Binary(std::string value);
-  ~Binary();
+  Decimal(std::string value);
+  Decimal(int value);
+  ~Decimal();
 
   std::string getValue();
   void setValue(std::string);
 };
 
-using Bin = Binary;
+using Dec = Decimal;
 
 } // namespace number
 } // namespace utilities

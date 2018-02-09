@@ -1,6 +1,6 @@
 #pragma once
 
-#include "interpreter/instructions/instructionsbuffer.h"
+#include "interpreter/interpreter/instructions/instructionsbuffer.h"
 #include <memory>
 
 namespace interpreter {

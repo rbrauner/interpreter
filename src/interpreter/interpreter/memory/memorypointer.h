@@ -1,7 +1,7 @@
 #pragma once
 
-#include "interpreter/address/position.h"
-#include "interpreter/address/value.h"
+#include "interpreter/interpreter/address/position.h"
+#include "interpreter/interpreter/address/value.h"
 #include <memory>
 
 namespace interpreter {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "utilites/buffer/buffer.h"
+#include "interpreter/utilites/buffer/buffer.h"
 
 namespace interpreter {
 namespace interpreter {
