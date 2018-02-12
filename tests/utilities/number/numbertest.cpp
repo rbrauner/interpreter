@@ -9,13 +9,13 @@ NumberTest::~NumberTest() {
   hex->~Number();
 }
 
-TEST_F(NumberTest, CreatedProperly) {
+TEST_F(NumberTest, CreateProperly) {
   EXPECT_EQ("111100", bin->getValue());
   EXPECT_EQ("60", dec->getValue());
   EXPECT_EQ("3c", hex->getValue());
 }
 
-TEST_F(NumberTest, TeardownedProperly) {
+TEST_F(NumberTest, TeardownProperly) {
   bin->~Number();
   dec->~Number();
   hex->~Number();

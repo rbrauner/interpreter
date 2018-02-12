@@ -57,12 +57,12 @@ void CharSetTest::checkIfCharsOutOfScopeNotExists() {
   EXPECT_FALSE(hex.checkIfExistsInCharSet(' '));
 }
 
-TEST_F(CharSetTest, CreatedProperly) {
+TEST_F(CharSetTest, CreateProperly) {
   checkIfAllCharsFromScopeExists();
   checkIfCharsOutOfScopeNotExists();
 }
 
-TEST_F(CharSetTest, TeardownedProperly) {
+TEST_F(CharSetTest, TeardownProperly) {
   bin.~CharSet();
   dec.~CharSet();
   hex.~CharSet();
