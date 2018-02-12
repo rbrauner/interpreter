@@ -1,7 +1,6 @@
 #pragma once
 
 namespace interpreter {
-namespace interpreter {
 namespace instructions {
 
 class Instruction {
@@ -11,5 +10,4 @@ public:
 };
 
 } // namespace instructions
-} // namespace interpreter
 } // namespace interpreter

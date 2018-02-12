@@ -1,9 +1,8 @@
 #pragma once
 
-#include "interpreter/interpreter/instructions/instructionsbuffer.h"
+#include "interpreter/instructions/instructionsbuffer.h"
 #include <memory>
 
-namespace interpreter {
 namespace interpreter {
 namespace interpreter {
 
@@ -22,6 +21,5 @@ public:
   virtual void execute() = 0;
 };
 
-} // namespace interpreter
 } // namespace interpreter
 } // namespace interpreter

@@ -2,7 +2,6 @@
 
 #include <initializer_list>
 
-namespace interpreter {
 namespace utilities {
 namespace buffer {
 
@@ -17,4 +16,3 @@ public:
 
 } // namespace buffer
 } // namespace utilities
-} // namespace interpreter

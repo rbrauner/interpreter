@@ -1,10 +1,9 @@
 #pragma once
 
-#include "interpreter/interpreter/address/position.h"
-#include "interpreter/interpreter/address/value.h"
+#include "interpreter/address/position.h"
+#include "interpreter/address/value.h"
 #include <memory>
 
-namespace interpreter {
 namespace interpreter {
 namespace memory {
 
@@ -16,5 +15,4 @@ public:
 };
 
 } // namespace memory
-} // namespace interpreter
 } // namespace interpreter

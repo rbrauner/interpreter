@@ -3,16 +3,14 @@
 #include <string>
 
 namespace interpreter {
-namespace interpreter {
 namespace address {
 
-class Position {
+class Value {
 public:
-  virtual ~Position() = 0;
+  virtual ~Value() = 0;
   virtual std::string toDec() = 0;
   virtual std::string toHex() = 0;
 };
 
 } // namespace address
-} // namespace interpreter
 } // namespace interpreter

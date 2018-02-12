@@ -3,7 +3,6 @@
 #include <memory>
 #include <string>
 
-namespace interpreter {
 namespace utilities {
 namespace number {
 
@@ -16,4 +15,3 @@ public:
 
 } // namespace number
 } // namespace utilities
-} // namespace interpreter
