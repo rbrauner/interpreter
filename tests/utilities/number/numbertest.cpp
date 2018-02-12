@@ -9,13 +9,13 @@ NumberTest::~NumberTest() {
   hex->~Number();
 }
 
-TEST_F(NumberTest, Constructors) {
+TEST_F(NumberTest, CreatedProperly) {
   EXPECT_EQ("111100", bin->getValue());
   EXPECT_EQ("60", dec->getValue());
   EXPECT_EQ("3c", hex->getValue());
 }
 
-TEST_F(NumberTest, Destructors) {
+TEST_F(NumberTest, TeardownedProperly) {
   bin->~Number();
   dec->~Number();
   hex->~Number();
@@ -25,7 +25,7 @@ TEST_F(NumberTest, Destructors) {
   EXPECT_EQ("0", hex->getValue());
 }
 
-TEST_F(NumberTest, Setters) {
+TEST_F(NumberTest, SetterWorks) {
   bin->setValue("00010110");
   dec->setValue("0022");
   hex->setValue("0016");

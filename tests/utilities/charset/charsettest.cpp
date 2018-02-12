@@ -57,12 +57,16 @@ void CharSetTest::checkIfCharsOutOfScopeNotExists() {
   EXPECT_FALSE(hex.checkIfExistsInCharSet(' '));
 }
 
-TEST_F(CharSetTest, Constructors) {
+TEST_F(CharSetTest, CreatedProperly) {
   checkIfAllCharsFromScopeExists();
   checkIfCharsOutOfScopeNotExists();
 }
 
-TEST_F(CharSetTest, Destructors) {
+TEST_F(CharSetTest, TeardownedProperly) {
+  bin.~CharSet();
+  dec.~CharSet();
+  hex.~CharSet();
+
   EXPECT_FALSE(bin.checkIfExistsInCharSet('0'));
   EXPECT_FALSE(bin.checkIfExistsInCharSet('1'));
   EXPECT_FALSE(bin.checkIfExistsInCharSet('2'));
@@ -79,7 +83,7 @@ TEST_F(CharSetTest, Destructors) {
   EXPECT_FALSE(hex.checkIfExistsInCharSet('g'));
 }
 
-TEST_F(CharSetTest, SetCharSet) {
+TEST_F(CharSetTest, SetterWorks) {
   bin.setCharSet("3216549870abcdef");              // 16
   dec.setCharSet({'2', '3', '1', '0'});            // 4
   hex.setCharSet({'1', '9', '3', 'a', '-', '\n'}); // 6
