@@ -62,27 +62,6 @@ TEST_F(CharSetTest, CreateProperly) {
   checkIfCharsOutOfScopeNotExists();
 }
 
-TEST_F(CharSetTest, TeardownProperly) {
-  bin.~CharSet();
-  dec.~CharSet();
-  hex.~CharSet();
-
-  EXPECT_FALSE(bin.checkIfExistsInCharSet('0'));
-  EXPECT_FALSE(bin.checkIfExistsInCharSet('1'));
-  EXPECT_FALSE(bin.checkIfExistsInCharSet('2'));
-  EXPECT_FALSE(bin.checkIfExistsInCharSet('a'));
-
-  EXPECT_FALSE(dec.checkIfExistsInCharSet('0'));
-  EXPECT_FALSE(dec.checkIfExistsInCharSet('4'));
-  EXPECT_FALSE(dec.checkIfExistsInCharSet('9'));
-  EXPECT_FALSE(dec.checkIfExistsInCharSet('a'));
-
-  EXPECT_FALSE(hex.checkIfExistsInCharSet('0'));
-  EXPECT_FALSE(hex.checkIfExistsInCharSet('7'));
-  EXPECT_FALSE(hex.checkIfExistsInCharSet('f'));
-  EXPECT_FALSE(hex.checkIfExistsInCharSet('g'));
-}
-
 TEST_F(CharSetTest, SetterWorks) {
   bin.setCharSet("3216549870abcdef");              // 16
   dec.setCharSet({'2', '3', '1', '0'});            // 4

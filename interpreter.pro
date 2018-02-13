@@ -32,4 +32,5 @@ SOURCES += \
     src/utilites/number/decimal.cpp \
     src/utilites/number/hexadecimal.cpp \
     tests/utilities/charset/charsettest.cpp \
-    tests/utilities/number/numbertest.cpp
+    tests/utilities/number/numbertest.cpp \
+    src/utilites/number/number.cpp

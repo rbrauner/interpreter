@@ -11,7 +11,7 @@ public:
   Hexadecimal(std::string value) {}
   ~Hexadecimal() {}
 
-  std::string getValue() {}
+  std::string getValue() { return nullptr; }
   void setValue(std::string) {}
 };
 

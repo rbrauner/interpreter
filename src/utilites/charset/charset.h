@@ -13,7 +13,7 @@ public:
 
   void setCharSet(std::initializer_list<char> charSet) {}
   void setCharSet(std::string charSet) {}
-  bool checkIfExistsInCharSet(char character) {}
+  bool checkIfExistsInCharSet(char character) { return true; }
 };
 
 } // namespace charset

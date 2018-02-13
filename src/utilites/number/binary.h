@@ -11,7 +11,7 @@ public:
   Binary(std::string value) {}
   ~Binary() {}
 
-  std::string getValue() {}
+  std::string getValue() { return nullptr; }
   void setValue(std::string) {}
 };
 
