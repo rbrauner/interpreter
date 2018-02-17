@@ -3,8 +3,8 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-unix|win32: LIBS += -lgtest
-unix|win32: LIBS += -lgtest_main
+include(gtest.pri)
+include(pthread.pri)
 
 INCLUDEPATH += src
 
