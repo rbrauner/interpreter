@@ -1,21 +1,21 @@
 #pragma once
 
-#include "utilites/number/number.h"
+#include "utilities/number/number.h"
 #include <string>
 
 namespace utilities {
 namespace number {
 
-class Binary : public Number {
+class Hexadecimal : public Number {
 public:
-  Binary(std::string value) {}
-  ~Binary() {}
+  Hexadecimal(std::string value) {}
+  ~Hexadecimal() {}
 
   std::string getValue() { return nullptr; }
   void setValue(std::string) {}
 };
 
-using Bin = Binary;
+using Hex = Hexadecimal;
 
 } // namespace number
 } // namespace utilities

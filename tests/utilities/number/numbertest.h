@@ -1,6 +1,6 @@
 #pragma once
 
-#include "utilites/number/number.h"
+#include "utilities/number/number.h"
 #include "gtest/gtest.h"
 #include <memory>
 

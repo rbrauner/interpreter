@@ -17,20 +17,20 @@ HEADERS += \
     src/interpreter/interpreter/interpreter.h \
     src/interpreter/memory/memory.h \
     src/interpreter/memory/memorypointer.h \
-    src/utilites/buffer/buffer.h \
-    src/utilites/charset/charset.h \
-    src/utilites/number/binary.h \
-    src/utilites/number/decimal.h \
-    src/utilites/number/hexadecimal.h \
-    src/utilites/number/number.h \
+    src/utilities/buffer/buffer.h \
+    src/utilities/charset/charset.h \
+    src/utilities/number/binary.h \
+    src/utilities/number/decimal.h \
+    src/utilities/number/hexadecimal.h \
+    src/utilities/number/number.h \
     tests/utilities/charset/charsettest.h \
     tests/utilities/number/numbertest.h
 
 SOURCES += \
-    src/utilites/charset/charset.cpp \
-    src/utilites/number/binary.cpp \
-    src/utilites/number/decimal.cpp \
-    src/utilites/number/hexadecimal.cpp \
+    src/utilities/charset/charset.cpp \
+    src/utilities/number/binary.cpp \
+    src/utilities/number/decimal.cpp \
+    src/utilities/number/hexadecimal.cpp \
+    src/utilities/number/number.cpp \
     tests/utilities/charset/charsettest.cpp \
-    tests/utilities/number/numbertest.cpp \
-    src/utilites/number/number.cpp
+    tests/utilities/number/numbertest.cpp

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "utilites/charset/charset.h"
+#include "utilities/charset/charset.h"
 #include "gtest/gtest.h"
 
 using utilities::charset::CharSet;

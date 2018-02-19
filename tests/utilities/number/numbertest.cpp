@@ -1,7 +1,7 @@
 #include "numbertest.h"
-#include "utilites/number/binary.h"
-#include "utilites/number/decimal.h"
-#include "utilites/number/hexadecimal.h"
+#include "utilities/number/binary.h"
+#include "utilities/number/decimal.h"
+#include "utilities/number/hexadecimal.h"
 
 using std::make_shared;
 using utilities::number::Bin;
