@@ -12,7 +12,7 @@ public:
   Decimal(int value) {}
   ~Decimal() {}
 
-  std::string getValue() { return nullptr; }
+  std::string getValue() { return ""; }
   void setValue(std::string) {}
 };
 
