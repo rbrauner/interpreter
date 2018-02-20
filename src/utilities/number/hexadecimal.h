@@ -9,7 +9,7 @@ namespace number {
 class Hexadecimal : public Number {
 public:
   Hexadecimal(std::string value) {}
-  ~Hexadecimal() {}
+  ~Hexadecimal();
 
   std::string getValue() { return ""; }
   void setValue(std::string) {}

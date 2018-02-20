@@ -9,7 +9,7 @@ namespace number {
 class Binary : public Number {
 public:
   Binary(std::string value) {}
-  ~Binary() {}
+  ~Binary();
 
   std::string getValue() { return ""; }
   void setValue(std::string) {}

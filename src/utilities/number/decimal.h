@@ -10,7 +10,7 @@ class Decimal : public Number {
 public:
   Decimal(std::string value) {}
   Decimal(int value) {}
-  ~Decimal() {}
+  ~Decimal();
 
   std::string getValue() { return ""; }
   void setValue(std::string) {}
