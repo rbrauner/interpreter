@@ -8,7 +8,6 @@ using utilities::charset::CharSet;
 class CharSetTest : public ::testing::Test {
 public:
   CharSetTest();
-  virtual ~CharSetTest();
 
   void checkIfAllCharsFromScopeExists();
   void checkIfCharsOutOfScopeNotExists();

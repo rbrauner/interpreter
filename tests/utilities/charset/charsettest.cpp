@@ -3,12 +3,6 @@
 CharSetTest::CharSetTest()
     : bin{{'0', '1'}}, dec{"9081726354"}, hex{"0123456789abcdef"} {}
 
-CharSetTest::~CharSetTest() {
-  bin.~CharSet();
-  dec.~CharSet();
-  hex.~CharSet();
-}
-
 void CharSetTest::checkIfAllCharsFromScopeExists() {
   EXPECT_TRUE(bin.checkIfExistsInCharSet('0'));
   EXPECT_TRUE(bin.checkIfExistsInCharSet('1'));
