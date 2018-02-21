@@ -25,7 +25,8 @@ HEADERS += \
     src/utilities/number/number.h \
     tests/utilities/charset/charsettest.h \
     tests/utilities/number/numbertest.h \
-    src/utilities/number/numberimpl.h
+    src/utilities/number/numberimpl.h \
+    src/utilities/number/numberexceptions.h
 
 SOURCES += \
     src/utilities/charset/charset.cpp \
