@@ -13,7 +13,7 @@ public:
   std::string getValue() override = 0;
   void setValue(std::string value) override = 0;
 
-private:
+protected:
   std::string m_value;
   utilities::charset::CharSet m_charSet;
 };
