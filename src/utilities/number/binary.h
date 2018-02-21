@@ -1,19 +1,11 @@
 #pragma once
 
-#include "utilities/number/number.h"
-#include <string>
+#include "utilities/number/numberimpl.h"
 
 namespace utilities {
 namespace number {
 
-class Binary : public Number {
-public:
-  Binary(std::string value) {}
-  ~Binary();
-
-  std::string getValue() { return ""; }
-  void setValue(std::string) {}
-};
+class Binary : public NumberImpl {};
 
 using Bin = Binary;
 

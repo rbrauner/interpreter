@@ -1,19 +1,11 @@
 #pragma once
 
-#include "utilities/number/number.h"
-#include <string>
+#include "utilities/number/numberimpl.h"
 
 namespace utilities {
 namespace number {
 
-class Hexadecimal : public Number {
-public:
-  Hexadecimal(std::string value) {}
-  ~Hexadecimal();
-
-  std::string getValue() { return ""; }
-  void setValue(std::string) {}
-};
+class Hexadecimal : public NumberImpl {};
 
 using Hex = Hexadecimal;
 
