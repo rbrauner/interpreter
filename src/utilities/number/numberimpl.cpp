@@ -1,8 +1,10 @@
 #include "numberimpl.h"
 
 #include "utilities/number/numberexceptions.h"
+#include <algorithm>
 
 using std::string;
+using std::transform;
 using utilities::charset::CharSet;
 using utilities::number::NumberImpl;
 
@@ -13,6 +15,9 @@ NumberImpl::~NumberImpl() {}
 string NumberImpl::getValue() { return m_value; }
 
 void NumberImpl::setValue(string value) {
+  // to lower case
+  transform(value.begin(), value.end(), value.begin(), ::tolower);
+
   // remove first, useless characters
   size_t i = 0;
   for (auto x : value) {
