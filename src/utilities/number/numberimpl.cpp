@@ -3,7 +3,10 @@
 #include "utilities/number/numberexceptions.h"
 
 using std::string;
+using utilities::charset::CharSet;
 using utilities::number::NumberImpl;
+
+NumberImpl::NumberImpl(CharSet charSet) : m_charSet{charSet} {}
 
 string NumberImpl::getValue() { return m_value; }
 

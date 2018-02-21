@@ -9,13 +9,15 @@ namespace number {
 
 class NumberImpl : public Number {
 public:
+  NumberImpl(utilities::charset::CharSet charSet);
   ~NumberImpl() override = 0;
+
   std::string getValue() override = 0;
   void setValue(std::string value) override = 0;
 
 protected:
-  std::string m_value;
   utilities::charset::CharSet m_charSet;
+  std::string m_value;
 };
 
 } // namespace number
