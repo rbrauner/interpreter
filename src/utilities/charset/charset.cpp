@@ -19,8 +19,20 @@ void CharSet::setCharSet(initializer_list<char> charSet) {
 void CharSet::setCharSet(string charSet) { m_charSet = charSet; }
 
 bool CharSet::checkIfExistsInCharSet(const char character) {
-  if (find(m_charSet.begin(), m_charSet.end(), character) != m_charSet.end())
+  auto pos = m_charSet.find(character);
+
+  try {
+    checkIfPositionIsCorrect(pos);
+  } catch (IsCorrect) {
     return true;
-  else
+  } catch (IsNotCorrect) {
     return false;
+  }
+}
+
+void CharSet::checkIfPositionIsCorrect(size_t pos) {
+  if (pos != string::npos)
+    throw IsCorrect{};
+  else
+    throw IsNotCorrect{};
 }
