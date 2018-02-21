@@ -8,6 +8,8 @@ using utilities::number::NumberImpl;
 
 NumberImpl::NumberImpl(CharSet charSet) : m_charSet{charSet} {}
 
+NumberImpl::~NumberImpl() {}
+
 string NumberImpl::getValue() { return m_value; }
 
 void NumberImpl::setValue(string value) {
