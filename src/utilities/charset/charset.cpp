@@ -1,4 +1,5 @@
 #include "charset.h"
+#include "exceptions.h"
 #include <algorithm>
 
 using std::begin;
@@ -7,6 +8,8 @@ using std::find;
 using std::initializer_list;
 using std::string;
 using utilities::charset::CharSet;
+using utilities::charset::exception::IsCorrect;
+using utilities::charset::exception::IsNotCorrect;
 
 CharSet::CharSet(initializer_list<char> charSet) : m_charSet{charSet} {}
 

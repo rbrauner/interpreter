@@ -19,10 +19,6 @@ private:
   std::string m_charSet;
 
   [[noreturn]] void checkIfPositionIsCorrect(size_t pos);
-
-  // exceptions
-  class IsCorrect {};
-  class IsNotCorrect {};
 };
 
 } // namespace charset
