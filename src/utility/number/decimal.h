@@ -1,8 +1,8 @@
 #pragma once
 
-#include "utilities/number/numberimpl.h"
+#include "utility/number/numberimpl.h"
 
-namespace utilities {
+namespace utility {
 namespace number {
 
 class Decimal : public NumberImpl {
@@ -17,4 +17,4 @@ public:
 using Dec = Decimal;
 
 } // namespace number
-} // namespace utilities
+} // namespace utility

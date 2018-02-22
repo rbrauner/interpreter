@@ -2,7 +2,7 @@
 
 #include <initializer_list>
 
-namespace utilities {
+namespace utility {
 namespace buffer {
 
 template <typename T> class FifoBuffer {

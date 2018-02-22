@@ -1,12 +1,12 @@
 #include "numbertest.h"
-#include "utilities/number/binary.h"
-#include "utilities/number/decimal.h"
-#include "utilities/number/hexadecimal.h"
+#include "utility/number/binary.h"
+#include "utility/number/decimal.h"
+#include "utility/number/hexadecimal.h"
 
 using std::make_shared;
-using utilities::number::Bin;
-using utilities::number::Dec;
-using utilities::number::Hex;
+using utility::number::Bin;
+using utility::number::Dec;
+using utility::number::Hex;
 
 NumberTest::NumberTest()
     : bin{make_shared<Bin>("111100")}, dec{make_shared<Dec>(60)},

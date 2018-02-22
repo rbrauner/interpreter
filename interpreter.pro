@@ -17,25 +17,25 @@ HEADERS += \
     src/interpreter/interpreter/interpreter.h \
     src/interpreter/memory/memory.h \
     src/interpreter/memory/memorypointer.h \
-    src/utilities/buffer/buffer.h \
-    src/utilities/charset/charset.h \
-    src/utilities/number/binary.h \
-    src/utilities/number/decimal.h \
-    src/utilities/number/hexadecimal.h \
-    src/utilities/number/number.h \
-    tests/utilities/charset/charsettest.h \
-    tests/utilities/number/numbertest.h \
-    src/utilities/number/numberimpl.h \
-    src/utilities/number/numberexceptions.h \
-    src/utilities/charset/exceptions.h
+    src/utility/buffer/buffer.h \
+    src/utility/charset/charset.h \
+    src/utility/charset/exceptions.h \
+    src/utility/number/binary.h \
+    src/utility/number/decimal.h \
+    src/utility/number/hexadecimal.h \
+    src/utility/number/number.h \
+    src/utility/number/numberexceptions.h \
+    src/utility/number/numberimpl.h \
+    tests/utility/charset/charsettest.h \
+    tests/utility/number/numbertest.h
 
 SOURCES += \
-    src/utilities/charset/charset.cpp \
-    src/utilities/number/binary.cpp \
-    src/utilities/number/decimal.cpp \
-    src/utilities/number/hexadecimal.cpp \
-    src/utilities/number/number.cpp \
-    tests/utilities/charset/charsettest.cpp \
-    tests/utilities/number/numbertest.cpp \
-    src/utilities/number/numberimpl.cpp \
-    src/utilities/charset/exceptions.cpp
+    src/utility/charset/charset.cpp \
+    src/utility/charset/exceptions.cpp \
+    src/utility/number/binary.cpp \
+    src/utility/number/decimal.cpp \
+    src/utility/number/hexadecimal.cpp \
+    src/utility/number/number.cpp \
+    src/utility/number/numberimpl.cpp \
+    tests/utility/charset/charsettest.cpp \
+    tests/utility/number/numbertest.cpp

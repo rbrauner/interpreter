@@ -3,7 +3,7 @@
 #include <initializer_list>
 #include <string>
 
-namespace utilities {
+namespace utility {
 namespace charset {
 
 class CharSet {
@@ -22,4 +22,4 @@ private:
 };
 
 } // namespace charset
-} // namespace utilities
+} // namespace utility

@@ -2,7 +2,7 @@
 
 #include <exception>
 
-namespace utilities {
+namespace utility {
 namespace charset {
 namespace exception {
 
@@ -11,4 +11,4 @@ class IsNotCorrect : std::exception {};
 
 } // namespace exception
 } // namespace charset
-} // namespace utilities
+} // namespace utility

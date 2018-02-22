@@ -1,9 +1,9 @@
 #pragma once
 
-#include "utilities/charset/charset.h"
+#include "utility/charset/charset.h"
 #include "gtest/gtest.h"
 
-using utilities::charset::CharSet;
+using utility::charset::CharSet;
 
 class CharSetTest : public ::testing::Test {
 public:

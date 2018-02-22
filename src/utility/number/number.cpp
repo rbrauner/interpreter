@@ -1,5 +1,5 @@
 #include "number.h"
 
-using utilities::number::Number;
+using utility::number::Number;
 
 Number::~Number() {}

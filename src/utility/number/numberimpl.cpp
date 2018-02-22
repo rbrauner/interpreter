@@ -1,12 +1,12 @@
 #include "numberimpl.h"
 
-#include "utilities/number/numberexceptions.h"
+#include "utility/number/numberexceptions.h"
 #include <algorithm>
 
 using std::string;
 using std::transform;
-using utilities::charset::CharSet;
-using utilities::number::NumberImpl;
+using utility::charset::CharSet;
+using utility::number::NumberImpl;
 
 NumberImpl::NumberImpl(CharSet charSet) : m_charSet{charSet} {}
 

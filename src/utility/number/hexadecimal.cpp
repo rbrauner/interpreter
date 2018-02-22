@@ -1,8 +1,8 @@
 #include "hexadecimal.h"
 
 using std::string;
-using utilities::charset::CharSet;
-using utilities::number::Hexadecimal;
+using utility::charset::CharSet;
+using utility::number::Hexadecimal;
 
 Hexadecimal::Hexadecimal(std::string value)
     : NumberImpl::NumberImpl{CharSet{"0123456789abcdef"}} {

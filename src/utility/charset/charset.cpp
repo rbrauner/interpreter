@@ -7,9 +7,9 @@ using std::end;
 using std::find;
 using std::initializer_list;
 using std::string;
-using utilities::charset::CharSet;
-using utilities::charset::exception::IsCorrect;
-using utilities::charset::exception::IsNotCorrect;
+using utility::charset::CharSet;
+using utility::charset::exception::IsCorrect;
+using utility::charset::exception::IsNotCorrect;
 
 CharSet::CharSet(initializer_list<char> charSet) : m_charSet{charSet} {}
 

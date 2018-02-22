@@ -1,8 +1,8 @@
 #pragma once
 
-#include "utilities/number/numberimpl.h"
+#include "utility/number/numberimpl.h"
 
-namespace utilities {
+namespace utility {
 namespace number {
 
 class Hexadecimal : public NumberImpl {
@@ -16,4 +16,4 @@ public:
 using Hex = Hexadecimal;
 
 } // namespace number
-} // namespace utilities
+} // namespace utility

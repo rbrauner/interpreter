@@ -2,8 +2,8 @@
 
 using std::string;
 using std::to_string;
-using utilities::charset::CharSet;
-using utilities::number::Decimal;
+using utility::charset::CharSet;
+using utility::number::Decimal;
 
 Decimal::Decimal(string value) : NumberImpl::NumberImpl{CharSet{"0123456789"}} {
   setValue(value);

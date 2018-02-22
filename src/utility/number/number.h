@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace utilities {
+namespace utility {
 namespace number {
 
 class Number {
@@ -13,4 +13,4 @@ public:
 };
 
 } // namespace number
-} // namespace utilities
+} // namespace utility
