@@ -20,11 +20,14 @@ protected:
   utility::charset::CharSet m_charSet;
   std::string m_value;
 
-  void transformToLowerCase(std::reference_wrapper<std::string> value);
-  void
-  removeUselessCharactersAtBegining(std::reference_wrapper<std::string> value);
-  void checkIfNumberIsCorrect(std::reference_wrapper<const std::string> value);
-  void setMemberValueUsing(std::reference_wrapper<const std::string> value);
+  // helpful methods
+  using StringReference = std::reference_wrapper<std::string>;
+  using ConstStringReference = std::reference_wrapper<const std::string>;
+
+  void transformToLowerCase(StringReference value);
+  void removeUselessCharactersAtBegining(StringReference value);
+  void checkIfNumberIsCorrect(ConstStringReference value);
+  void setMemberValueUsing(ConstStringReference value);
 };
 
 } // namespace number

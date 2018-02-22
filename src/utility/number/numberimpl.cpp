@@ -27,13 +27,12 @@ void NumberImpl::setValue(string value) {
   }
 }
 
-void NumberImpl::transformToLowerCase(reference_wrapper<string> value) {
+void NumberImpl::transformToLowerCase(StringReference value) {
   transform(value.get().begin(), value.get().end(), value.get().begin(),
             ::tolower);
 }
 
-void NumberImpl::removeUselessCharactersAtBegining(
-    reference_wrapper<string> value) {
+void NumberImpl::removeUselessCharactersAtBegining(StringReference value) {
   size_t i = 0;
   for (auto x : value.get()) {
     if (m_charSet.checkIfExistsInCharSet(x) && x != '0') {
@@ -45,7 +44,7 @@ void NumberImpl::removeUselessCharactersAtBegining(
   value.get() = value.get().substr(i);
 }
 
-void NumberImpl::checkIfNumberIsCorrect(reference_wrapper<const string> value) {
+void NumberImpl::checkIfNumberIsCorrect(ConstStringReference value) {
   for (auto x : value.get()) {
     if (!m_charSet.checkIfExistsInCharSet(x)) {
       throw NumberIsNotCorrect{};
@@ -53,6 +52,6 @@ void NumberImpl::checkIfNumberIsCorrect(reference_wrapper<const string> value) {
   }
 }
 
-void NumberImpl::setMemberValueUsing(reference_wrapper<const string> value) {
+void NumberImpl::setMemberValueUsing(ConstStringReference value) {
   m_value = value.get();
 }
