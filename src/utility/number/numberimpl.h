@@ -2,6 +2,7 @@
 
 #include "utility/charset/charset.h"
 #include "utility/number/number.h"
+#include <functional>
 #include <string>
 
 namespace utility {
@@ -18,6 +19,12 @@ public:
 protected:
   utility::charset::CharSet m_charSet;
   std::string m_value;
+
+  void transformToLowerCase(std::reference_wrapper<std::string> value);
+  void
+  removeUselessCharactersAtBegining(std::reference_wrapper<std::string> value);
+  void checkIfNumberIsCorrect(std::reference_wrapper<const std::string> value);
+  void setMemberValueUsing(std::reference_wrapper<const std::string> value);
 };
 
 } // namespace number
