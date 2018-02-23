@@ -7,6 +7,10 @@
 using std::shared_ptr;
 using utility::number::Number;
 
+namespace tests {
+namespace utility {
+namespace number {
+
 class NumberTest : public ::testing::Test {
 public:
   NumberTest();
@@ -17,3 +21,7 @@ protected:
   shared_ptr<Number> dec;
   shared_ptr<Number> hex;
 };
+
+} // namespace number
+} // namespace utility
+} // namespace tests

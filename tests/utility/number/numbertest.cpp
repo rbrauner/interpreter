@@ -4,6 +4,7 @@
 #include "utility/number/hexadecimal.h"
 
 using std::make_shared;
+using tests::utility::number::NumberTest;
 using utility::number::Bin;
 using utility::number::Dec;
 using utility::number::Hex;

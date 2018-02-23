@@ -5,6 +5,10 @@
 
 using utility::charset::CharSet;
 
+namespace tests {
+namespace utility {
+namespace charset {
+
 class CharSetTest : public ::testing::Test {
 public:
   CharSetTest();
@@ -17,3 +21,7 @@ protected:
   CharSet dec;
   CharSet hex;
 };
+
+} // namespace charset
+} // namespace utility
+} // namespace tests
