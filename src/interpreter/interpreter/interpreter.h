@@ -11,8 +11,6 @@ public:
   using InstructionsBufferReference =
       std::reference_wrapper<instructions::InstructionsBuffer<T>>;
 
-  static void interpret(const InstructionsBufferReference instructions) = 0;
-
   virtual ~Interpreter() = 0;
   virtual void
   addInstructions(const InstructionsBufferReference instructions) = 0;
