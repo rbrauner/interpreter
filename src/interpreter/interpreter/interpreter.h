@@ -1,6 +1,6 @@
 #pragma once
 
-#include "interpreter/instructions/instructionsbuffer.h"
+#include "interpreter/instruction/instructionsbuffer.h"
 #include <memory>
 
 namespace interpreter {
@@ -9,7 +9,7 @@ namespace interpreter {
 template <typename T> class Interpreter {
 public:
   using InstructionsBufferReference =
-      std::reference_wrapper<instructions::InstructionsBuffer<T>>;
+      std::reference_wrapper<instruction::InstructionsBuffer<T>>;
 
   virtual ~Interpreter() = 0;
   virtual void

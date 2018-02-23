@@ -1,7 +1,7 @@
 #pragma once
 
 namespace interpreter {
-namespace instructions {
+namespace instruction {
 
 class Instruction {
 public:
@@ -9,5 +9,5 @@ public:
   virtual void exectute() = 0;
 };
 
-} // namespace instructions
+} // namespace instruction
 } // namespace interpreter

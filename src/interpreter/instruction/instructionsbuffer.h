@@ -3,10 +3,10 @@
 #include "utility/buffer/buffer.h"
 
 namespace interpreter {
-namespace instructions {
+namespace instruction {
 
 template <typename T>
 class InstructionsBuffer : public utility::buffer::FifoBuffer<T> {};
 
-} // namespace instructions
+} // namespace instruction
 } // namespace interpreter
