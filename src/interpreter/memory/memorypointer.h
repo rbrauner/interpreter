@@ -1,17 +1,15 @@
 #pragma once
 
-#include "interpreter/address/position.h"
-#include "interpreter/address/value.h"
+#include "interpreter/address/address.h"
 #include <memory>
 
 namespace interpreter {
 namespace memory {
 
-class MemoryPointer {
+template <typename T = ::interpreter::address::Address>
+class MemoryPointer : public std::shared_ptr<T> {
 public:
   virtual ~MemoryPointer() = 0;
-  virtual std::shared_ptr<address::Value> getValue() = 0;
-  virtual std::shared_ptr<address::Position> getPosition() = 0;
 };
 
 } // namespace memory
