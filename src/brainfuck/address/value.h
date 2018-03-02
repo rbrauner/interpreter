@@ -1,14 +1,14 @@
 #pragma once
 
-#include "interpreter/address/value.h"
 #include "utility/number/binary.h"
 #include "utility/number/decimal.h"
 #include "utility/number/hexadecimal.h"
+#include <memory>
 
 namespace brainfuck {
 namespace address {
 
-class Value : public ::interpreter::address::Value {
+class Value {
 public:
   using Binary = utility::number::Binary;
   using Decimal = utility::number::Decimal;
@@ -18,10 +18,9 @@ public:
   Value(Binary value) {}
   Value(Decimal value) {}
   Value(Hexadecimal value) {}
-  ~Value() override;
 
-  NumberPointer toDec() override {}
-  NumberPointer toHex() override {}
+  NumberPointer toDec() {}
+  NumberPointer toHex() {}
 };
 
 } // namespace address

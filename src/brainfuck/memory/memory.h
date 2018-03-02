@@ -1,16 +1,15 @@
 #pragma once
 
-#include "interpreter/memory/memory.h"
 #include <cstddef>
 
 namespace brainfuck {
 namespace memory {
 
-template <typename T> class Memory : public ::interpreter::memory::Memory {
+template <typename T> class Memory {
 public:
   Memory(size_t size) {}
 
-  void clear() override {}
+  void clear() {}
 };
 
 } // namespace memory

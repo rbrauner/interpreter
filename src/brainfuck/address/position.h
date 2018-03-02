@@ -1,14 +1,14 @@
 #pragma once
 
-#include "interpreter/address/position.h"
 #include "utility/number/binary.h"
 #include "utility/number/decimal.h"
 #include "utility/number/hexadecimal.h"
+#include <memory>
 
 namespace brainfuck {
 namespace address {
 
-class Position : public ::interpreter::address::Position {
+class Position {
 public:
   using Binary = utility::number::Binary;
   using Decimal = utility::number::Decimal;
@@ -18,10 +18,9 @@ public:
   Position(Binary position) {}
   Position(Decimal position) {}
   Position(Hexadecimal position) {}
-  ~Position() override;
 
-  NumberPointer toDec() override {}
-  NumberPointer toHex() override {}
+  NumberPointer toDec() {}
+  NumberPointer toHex() {}
 };
 
 } // namespace address
