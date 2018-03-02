@@ -36,7 +36,8 @@ HEADERS += \
     src/utility/number/numberexceptions.h \
     src/utility/number/numberimpl.h \
     tests/utility/charset/charsettest.h \
-    tests/utility/number/numbertest.h
+    tests/utility/number/numbertest.h \
+    tests/brainfuck/address/addresstest.h
 
 SOURCES += \
     src/brainfuck/address/address.cpp \
@@ -57,4 +58,5 @@ SOURCES += \
     src/utility/number/number.cpp \
     src/utility/number/numberimpl.cpp \
     tests/utility/charset/charsettest.cpp \
-    tests/utility/number/numbertest.cpp
+    tests/utility/number/numbertest.cpp \
+    tests/brainfuck/address/addresstest.cpp
