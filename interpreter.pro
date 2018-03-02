@@ -10,6 +10,7 @@ include(pthread.pri)
 INCLUDEPATH += src
 
 HEADERS += \
+    src/alias/number.h \
     src/brainfuck/address/address.h \
     src/brainfuck/address/position.h \
     src/brainfuck/address/value.h \
