@@ -1,26 +1,18 @@
 #pragma once
 
-#include "utility/number/binary.h"
-#include "utility/number/decimal.h"
-#include "utility/number/hexadecimal.h"
-#include <memory>
+#include "alias/number.h"
 
 namespace brainfuck {
 namespace address {
 
 class Position {
 public:
-  using Binary = utility::number::Binary;
-  using Decimal = utility::number::Decimal;
-  using Hexadecimal = utility::number::Hexadecimal;
-  using NumberPointer = std::shared_ptr<utility::number::Number>;
+  Position(alias::Binary position) {}
+  Position(alias::Decimal position) {}
+  Position(alias::Hexadecimal position) {}
 
-  Position(Binary position) {}
-  Position(Decimal position) {}
-  Position(Hexadecimal position) {}
-
-  NumberPointer toDec() {}
-  NumberPointer toHex() {}
+  alias::NumberPointer toDec() {}
+  alias::NumberPointer toHex() {}
 };
 
 } // namespace address
