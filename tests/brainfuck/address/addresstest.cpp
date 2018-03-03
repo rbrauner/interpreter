@@ -46,8 +46,8 @@ TEST_F(AddressTest, InitializeWith5Properly) {
   EXPECT_EQ(alias::Decimal{"5"}, addresses.at(0).getValue().toDec());
   EXPECT_EQ(alias::Decimal{"5"}, addresses.at(1).getValue().toDec());
   EXPECT_EQ(alias::Decimal{"5"}, addresses.at(500).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"9"}, addresses.at(998).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"9"}, addresses.at(999).getValue().toDec());
+  EXPECT_EQ(alias::Decimal{"5"}, addresses.at(998).getValue().toDec());
+  EXPECT_EQ(alias::Decimal{"5"}, addresses.at(999).getValue().toDec());
 }
 
 TEST_F(AddressTest, InitializeWithSuccessiveNumbersProperly) {
@@ -70,8 +70,8 @@ TEST_F(AddressTest, SetterWorks) {
   EXPECT_EQ(alias::Decimal{"5"}, addresses.at(0).getValue().toDec());
   EXPECT_EQ(alias::Decimal{"5"}, addresses.at(1).getValue().toDec());
   EXPECT_EQ(alias::Decimal{"5"}, addresses.at(500).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"9"}, addresses.at(998).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"9"}, addresses.at(999).getValue().toDec());
+  EXPECT_EQ(alias::Decimal{"5"}, addresses.at(998).getValue().toDec());
+  EXPECT_EQ(alias::Decimal{"5"}, addresses.at(999).getValue().toDec());
 
   // surrounding
   EXPECT_EQ(alias::Decimal{"0"}, addresses.at(2).getValue().toDec());
