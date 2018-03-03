@@ -9,7 +9,7 @@ class Binary : public NumberImpl {
 public:
   Binary(std::string value);
 
-  std::string getValue() override;
+  std::string getValue() const override;
   void setValue(std::string value) override;
 };
 

@@ -14,6 +14,6 @@ Decimal::Decimal(size_t value) : NumberImpl::NumberImpl{CharSet{"0123456789"}} {
   setValue(svalue);
 }
 
-string Decimal::getValue() { return NumberImpl::getValue(); }
+string Decimal::getValue() const { return NumberImpl::getValue(); }
 
 void Decimal::setValue(string value) { NumberImpl::setValue(value); }

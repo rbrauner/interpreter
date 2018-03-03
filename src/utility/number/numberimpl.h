@@ -13,7 +13,7 @@ public:
   NumberImpl(utility::charset::CharSet charSet);
   ~NumberImpl() override = 0;
 
-  std::string getValue() override = 0;
+  std::string getValue() const override = 0;
   void setValue(std::string value) override = 0;
 
 protected:

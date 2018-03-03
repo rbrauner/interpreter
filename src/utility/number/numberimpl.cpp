@@ -14,7 +14,7 @@ NumberImpl::NumberImpl(CharSet charSet) : m_charSet{charSet} {}
 
 NumberImpl::~NumberImpl() {}
 
-string NumberImpl::getValue() { return m_value; }
+string NumberImpl::getValue() const { return m_value; }
 
 void NumberImpl::setValue(string value) {
   try {

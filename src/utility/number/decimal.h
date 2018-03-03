@@ -10,7 +10,7 @@ public:
   Decimal(std::string value);
   Decimal(size_t value);
 
-  std::string getValue() override;
+  std::string getValue() const override;
   void setValue(std::string value) override;
 };
 

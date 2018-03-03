@@ -9,6 +9,6 @@ Hexadecimal::Hexadecimal(std::string value)
   setValue(value);
 }
 
-std::string Hexadecimal::getValue() { return NumberImpl::getValue(); }
+std::string Hexadecimal::getValue() const { return NumberImpl::getValue(); }
 
 void Hexadecimal::setValue(std::string value) { NumberImpl::setValue(value); }

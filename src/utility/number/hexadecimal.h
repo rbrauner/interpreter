@@ -9,7 +9,7 @@ class Hexadecimal : public NumberImpl {
 public:
   Hexadecimal(std::string value);
 
-  std::string getValue() override;
+  std::string getValue() const override;
   void setValue(std::string value) override;
 };
 
