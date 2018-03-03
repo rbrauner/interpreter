@@ -7,12 +7,15 @@ namespace address {
 
 class Position {
 public:
-  Position(alias::Binary position) {}
-  Position(alias::Decimal position) {}
-  Position(alias::Hexadecimal position) {}
+  Position(alias::Binary position);
+  Position(alias::Decimal position);
+  Position(alias::Hexadecimal position);
 
-  alias::Decimal toDec() {}
-  alias::Hexadecimal toHex() {}
+  alias::Decimal toDec() const;
+  alias::Hexadecimal toHex() const;
+
+private:
+  alias::NumberPointer m_position;
 };
 
 } // namespace address

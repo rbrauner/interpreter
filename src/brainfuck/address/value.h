@@ -7,12 +7,15 @@ namespace address {
 
 class Value {
 public:
-  Value(alias::Binary value) {}
-  Value(alias::Decimal value) {}
-  Value(alias::Hexadecimal value) {}
+  Value(alias::Binary value);
+  Value(alias::Decimal value);
+  Value(alias::Hexadecimal value);
 
-  alias::Decimal toDec() {}
-  alias::Hexadecimal toHex() {}
+  alias::Decimal toDec() const;
+  alias::Hexadecimal toHex() const;
+
+private:
+  alias::NumberPointer m_value;
 };
 
 } // namespace address
