@@ -10,8 +10,8 @@ class Address {
 public:
   Address(Position position, Value value = alias::Decimal{"0"});
 
-  Position getPosition();
-  Value getValue();
+  Position getPosition() const;
+  Value getValue() const;
   void setValue(Value value);
 
 private:
