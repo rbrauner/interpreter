@@ -11,8 +11,8 @@ public:
   Value(alias::Decimal value) {}
   Value(alias::Hexadecimal value) {}
 
-  alias::NumberPointer toDec() {}
-  alias::NumberPointer toHex() {}
+  alias::Decimal toDec() {}
+  alias::Hexadecimal toHex() {}
 };
 
 } // namespace address

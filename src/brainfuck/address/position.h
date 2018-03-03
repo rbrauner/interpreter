@@ -11,8 +11,8 @@ public:
   Position(alias::Decimal position) {}
   Position(alias::Hexadecimal position) {}
 
-  alias::NumberPointer toDec() {}
-  alias::NumberPointer toHex() {}
+  alias::Decimal toDec() {}
+  alias::Hexadecimal toHex() {}
 };
 
 } // namespace address
