@@ -9,6 +9,8 @@ class Hexadecimal : public NumberImpl {
 public:
   Hexadecimal(std::string value);
 
+  bool operator==(const Hexadecimal &h) const;
+
   std::string getValue() const override;
   void setValue(std::string value) override;
 };

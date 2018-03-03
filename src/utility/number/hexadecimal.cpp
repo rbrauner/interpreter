@@ -9,6 +9,13 @@ Hexadecimal::Hexadecimal(std::string value)
   setValue(value);
 }
 
+bool Hexadecimal::operator==(const Hexadecimal &h) const {
+  if (h.getValue() == this->getValue())
+    return true;
+  else
+    return false;
+}
+
 std::string Hexadecimal::getValue() const { return NumberImpl::getValue(); }
 
 void Hexadecimal::setValue(std::string value) { NumberImpl::setValue(value); }

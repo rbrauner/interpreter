@@ -10,6 +10,8 @@ public:
   Decimal(std::string value);
   Decimal(size_t value);
 
+  bool operator==(const Decimal &d) const;
+
   std::string getValue() const override;
   void setValue(std::string value) override;
 };
