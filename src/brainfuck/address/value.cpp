@@ -13,9 +13,13 @@ Value::Value(alias::Hexadecimal value)
     : m_value{make_shared<alias::Hexadecimal>(value)} {}
 
 alias::Decimal Value::toDec() const {
-  return alias::Decimal{m_value->getValue()};
+  std::string value = m_value->getValue();
+  alias::Decimal dec{value};
+  return dec;
 }
 
 alias::Hexadecimal Value::toHex() const {
-  return alias::Hexadecimal{m_value->getValue()};
+  std::string value = m_value->getValue();
+  alias::Hexadecimal hex{value};
+  return hex;
 }

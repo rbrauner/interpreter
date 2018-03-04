@@ -13,9 +13,13 @@ Position::Position(alias::Hexadecimal position)
     : m_position{make_shared<alias::Hexadecimal>(position)} {}
 
 alias::Decimal Position::toDec() const {
-  return alias::Decimal{m_position->getValue()};
+  std::string value = m_position->getValue();
+  alias::Decimal dec{value};
+  return dec;
 }
 
 alias::Hexadecimal Position::toHex() const {
-  return alias::Hexadecimal{m_position->getValue()};
+  std::string value = m_position->getValue();
+  alias::Hexadecimal hex{value};
+  return hex;
 }
