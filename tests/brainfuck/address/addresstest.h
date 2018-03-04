@@ -16,7 +16,7 @@ public:
   void initializeWithSuccessiveNumbers();
 
 protected:
-  int howMany = 1000;
+  static constexpr int howMany = 1000;
   std::vector<::brainfuck::address::Address> addresses;
 };
 
