@@ -23,3 +23,7 @@ alias::Hexadecimal Position::toHex() const {
   alias::Hexadecimal hex{value};
   return hex;
 }
+
+bool Position::operator==(const Position &p) const {
+  return (m_position == p.m_position) ? true : false;
+}

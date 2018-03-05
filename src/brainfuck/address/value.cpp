@@ -23,3 +23,7 @@ alias::Hexadecimal Value::toHex() const {
   alias::Hexadecimal hex{value};
   return hex;
 }
+
+bool Value::operator==(const Value &v) const {
+  return (m_value == v.m_value) ? true : false;
+}
