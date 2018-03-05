@@ -1,13 +1,15 @@
 #pragma once
 
 #include "brainfuck/address/address.h"
+#include "brainfuck/memory/memory.h"
 
 namespace brainfuck {
 namespace memory {
 
-class MemoryPointer {
+class MemoryPointer
+    : public std::vector<brainfuck::address::Address>::iterator {
 public:
-  MemoryPointer() {}
+  MemoryPointer(brainfuck::memory::Memory &memory, std::uint32_t position = 0);
 };
 
 } // namespace memory
