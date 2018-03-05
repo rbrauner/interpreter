@@ -13,8 +13,8 @@ public:
   MemoryTest();
 
 protected:
-  Memory memory;
-  std::vector<MemoryPointer> memoryPointers;
+  Memory m_memory;
+  std::vector<MemoryPointer> m_memoryPointers;
 };
 
 } // namespace memory
