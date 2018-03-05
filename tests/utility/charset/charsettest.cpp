@@ -1,6 +1,6 @@
 #include "charsettest.h"
 
-using tests::utility::charset::CharSetTest;
+using utility::charset::CharSetTest;
 
 CharSetTest::CharSetTest()
     : bin{{'0', '1'}}, dec{"9081726354"}, hex{"0123456789abcdef"} {}

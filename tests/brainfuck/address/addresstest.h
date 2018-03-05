@@ -4,7 +4,6 @@
 #include "gtest/gtest.h"
 #include <vector>
 
-namespace tests {
 namespace brainfuck {
 namespace address {
 
@@ -22,4 +21,3 @@ protected:
 
 } // namespace address
 } // namespace brainfuck
-} // namespace tests

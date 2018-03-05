@@ -2,7 +2,7 @@
 
 using brainfuck::address::Value;
 using brainfuck::memory::MemoryPointer;
-using tests::brainfuck::memory::MemoryTest;
+using brainfuck::memory::MemoryTest;
 
 MemoryTest::MemoryTest() : memory{1000} {
   memoryPointers.push_back(MemoryPointer{&memory, 0});

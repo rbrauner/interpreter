@@ -4,10 +4,10 @@
 #include "utility/number/hexadecimal.h"
 
 using std::make_shared;
-using tests::utility::number::NumberTest;
 using utility::number::Bin;
 using utility::number::Dec;
 using utility::number::Hex;
+using utility::number::NumberTest;
 
 NumberTest::NumberTest()
     : bin{make_shared<Bin>("111100")}, dec{make_shared<Dec>(60)},

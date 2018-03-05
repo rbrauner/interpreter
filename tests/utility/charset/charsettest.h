@@ -5,7 +5,6 @@
 
 using utility::charset::CharSet;
 
-namespace tests {
 namespace utility {
 namespace charset {
 
@@ -24,4 +23,3 @@ protected:
 
 } // namespace charset
 } // namespace utility
-} // namespace tests

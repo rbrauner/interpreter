@@ -3,9 +3,9 @@
 #include "alias/number.h"
 
 using brainfuck::address::Address;
+using brainfuck::address::AddressTest;
 using brainfuck::address::Position;
 using brainfuck::address::Value;
-using tests::brainfuck::address::AddressTest;
 
 AddressTest::AddressTest() { emptyInitialize(); }
 

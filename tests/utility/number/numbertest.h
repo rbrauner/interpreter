@@ -7,7 +7,6 @@
 using std::shared_ptr;
 using utility::number::Number;
 
-namespace tests {
 namespace utility {
 namespace number {
 
@@ -24,4 +23,3 @@ protected:
 
 } // namespace number
 } // namespace utility
-} // namespace tests
