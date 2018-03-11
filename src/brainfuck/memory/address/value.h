@@ -3,6 +3,7 @@
 #include "alias/number.h"
 
 namespace brainfuck {
+namespace memory {
 namespace address {
 
 class Value {
@@ -21,4 +22,5 @@ private:
 };
 
 } // namespace address
+} // namespace memory
 } // namespace brainfuck

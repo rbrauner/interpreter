@@ -1,10 +1,11 @@
 #pragma once
 
-#include "brainfuck/address/address.h"
+#include "brainfuck/memory/address/address.h"
 #include "gtest/gtest.h"
 #include <vector>
 
 namespace brainfuck {
+namespace memory {
 namespace address {
 
 class AddressTest : public ::testing::Test {
@@ -16,8 +17,9 @@ public:
 
 protected:
   static constexpr int howMany = 1000;
-  std::vector<::brainfuck::address::Address> addresses;
+  std::vector<::brainfuck::memory::address::Address> addresses;
 };
 
 } // namespace address
+} // namespace memory
 } // namespace brainfuck

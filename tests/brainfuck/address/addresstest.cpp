@@ -2,10 +2,10 @@
 
 #include "alias/number.h"
 
-using brainfuck::address::Address;
-using brainfuck::address::AddressTest;
-using brainfuck::address::Position;
-using brainfuck::address::Value;
+using brainfuck::memory::address::Address;
+using brainfuck::memory::address::AddressTest;
+using brainfuck::memory::address::Position;
+using brainfuck::memory::address::Value;
 
 AddressTest::AddressTest() { emptyInitialize(); }
 

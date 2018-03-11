@@ -11,11 +11,11 @@ INCLUDEPATH += src
 
 HEADERS += \
     src/alias/number.h \
-    src/brainfuck/address/address.h \
-    src/brainfuck/address/position.h \
-    src/brainfuck/address/value.h \
     src/brainfuck/instruction/instruction.h \
     src/brainfuck/interpreter/interpreter.h \
+    src/brainfuck/memory/address/address.h \
+    src/brainfuck/memory/address/position.h \
+    src/brainfuck/memory/address/value.h \
     src/brainfuck/memory/memory.h \
     src/brainfuck/memory/memorypointer.h \
     src/interpreter/instruction/instruction.h \
@@ -35,11 +35,11 @@ HEADERS += \
     tests/utility/number/numbertest.h
 
 SOURCES += \
-    src/brainfuck/address/address.cpp \
-    src/brainfuck/address/position.cpp \
-    src/brainfuck/address/value.cpp \
     src/brainfuck/instruction/instruction.cpp \
     src/brainfuck/interpreter/interpreter.cpp \
+    src/brainfuck/memory/address/address.cpp \
+    src/brainfuck/memory/address/position.cpp \
+    src/brainfuck/memory/address/value.cpp \
     src/brainfuck/memory/memory.cpp \
     src/brainfuck/memory/memorypointer.cpp \
     src/utility/charset/charset.cpp \

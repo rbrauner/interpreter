@@ -1,9 +1,10 @@
 #pragma once
 
-#include "brainfuck/address/position.h"
-#include "brainfuck/address/value.h"
+#include "brainfuck/memory/address/position.h"
+#include "brainfuck/memory/address/value.h"
 
 namespace brainfuck {
+namespace memory {
 namespace address {
 
 class Address {
@@ -22,4 +23,5 @@ private:
 };
 
 } // namespace address
+} // namespace memory
 } // namespace brainfuck

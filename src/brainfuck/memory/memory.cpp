@@ -1,8 +1,8 @@
 #include "memory.h"
 
-using brainfuck::address::Address;
-using brainfuck::address::Value;
 using brainfuck::memory::Memory;
+using brainfuck::memory::address::Address;
+using brainfuck::memory::address::Value;
 using std::uint32_t;
 
 Memory::Memory(uint32_t size) : m_memory{size, Address{alias::Decimal{"0"}}} {}

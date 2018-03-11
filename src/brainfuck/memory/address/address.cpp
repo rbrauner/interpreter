@@ -1,8 +1,8 @@
 #include "address.h"
 
-using brainfuck::address::Address;
-using brainfuck::address::Position;
-using brainfuck::address::Value;
+using brainfuck::memory::address::Address;
+using brainfuck::memory::address::Position;
+using brainfuck::memory::address::Value;
 
 Address::Address(Position position, Value value)
     : m_position{position}, m_value{value} {}

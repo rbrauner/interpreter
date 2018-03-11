@@ -1,6 +1,6 @@
 #include "position.h"
 
-using brainfuck::address::Position;
+using brainfuck::memory::address::Position;
 using std::make_shared;
 
 Position::Position(alias::Binary position)

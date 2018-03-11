@@ -1,6 +1,6 @@
 #include "memorytest.h"
 
-using brainfuck::address::Value;
+using brainfuck::memory::address::Value;
 using std::make_shared;
 
 namespace brainfuck {

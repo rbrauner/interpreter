@@ -1,6 +1,6 @@
 #include "value.h"
 
-using brainfuck::address::Value;
+using brainfuck::memory::address::Value;
 using std::make_shared;
 
 Value::Value(alias::Binary value)
