@@ -2,6 +2,8 @@
 
 #include "brainfuck/memory/address/position.h"
 #include "brainfuck/memory/address/value.h"
+#include <cstdint>
+#include <string>
 
 namespace brainfuck {
 namespace memory {
@@ -9,7 +11,10 @@ namespace address {
 
 class Address {
 public:
-  Address(Position position, Value value = alias::Decimal{"0"});
+  Address(Position position,
+          Value value = Value{alias::Decimal{"0"},
+                              alias::Decimal{std::to_string(INT8_MIN)},
+                              alias::Decimal{std::to_string(INT8_MAX)}});
 
   Position getPosition() const;
   Value getValue() const;
