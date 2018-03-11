@@ -12,6 +12,7 @@ public:
   Position(alias::Decimal position);
   Position(alias::Hexadecimal position);
 
+  alias::Binary toBin() const;
   alias::Decimal toDec() const;
   alias::Hexadecimal toHex() const;
 
