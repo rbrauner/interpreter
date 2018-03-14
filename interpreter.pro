@@ -32,7 +32,8 @@ HEADERS += \
     tests/brainfuck/memory/address/addresstest.h \
     tests/brainfuck/memory/memorytest.h \
     tests/utility/charset/charsettest.h \
-    tests/utility/number/numbertest.h
+    tests/utility/number/numbertest.h \
+    tests/brainfuck/memory/address/valuetest.h
 
 SOURCES += \
     src/brainfuck/instruction/instruction.cpp \
@@ -52,4 +53,5 @@ SOURCES += \
     tests/brainfuck/memory/address/addresstest.cpp \
     tests/brainfuck/memory/memorytest.cpp \
     tests/utility/charset/charsettest.cpp \
-    tests/utility/number/numbertest.cpp
+    tests/utility/number/numbertest.cpp \
+    tests/brainfuck/memory/address/valuetest.cpp
