@@ -12,13 +12,7 @@ public:
   ValueTest();
 
 protected:
-  Value binDefault;
-  Value decDefault;
-  Value hexDefault;
-
-  Value minusTenToMinusFive;
-  Value minusFiveToTen;
-  Value fiveToTwentyFive;
+  Value m_value;
 };
 
 } // namespace address
