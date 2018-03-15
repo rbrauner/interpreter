@@ -19,6 +19,10 @@ protected:
   shared_ptr<Number> bin;
   shared_ptr<Number> dec;
   shared_ptr<Number> hex;
+
+  shared_ptr<Number> negativeBin;
+  shared_ptr<Number> negativeDec;
+  shared_ptr<Number> negativeHex;
 };
 
 } // namespace number
