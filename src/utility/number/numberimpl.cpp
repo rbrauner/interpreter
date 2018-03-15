@@ -31,6 +31,10 @@ void NumberImpl::transformToLowerCase(StringReference value) {
 }
 
 void NumberImpl::removeUselessCharactersAtBegining(StringReference value) {
+  string minusIfNumberIsNegative = "";
+  if (value.at(0) == '-')
+    minusIfNumberIsNegative = '-';
+
   size_t i = 0;
   for (auto x : value) {
     if (m_charSet.checkIfExistsInCharSet(x) && x != '0') {
@@ -39,7 +43,7 @@ void NumberImpl::removeUselessCharactersAtBegining(StringReference value) {
     i++;
   }
 
-  value = value.substr(i);
+  value = minusIfNumberIsNegative + value.substr(i);
 }
 
 void NumberImpl::checkIfNumberIsCorrect(ConstStringReference value) {
