@@ -15,8 +15,6 @@ NumberTest::NumberTest()
       negativeDec{make_shared<Dec>(-60)}, negativeHex{make_shared<Hex>("-3c")} {
 }
 
-NumberTest::~NumberTest() {}
-
 TEST_F(NumberTest, CreateProperly) {
   EXPECT_EQ("111100", bin->getValue());
   EXPECT_EQ("60", dec->getValue());

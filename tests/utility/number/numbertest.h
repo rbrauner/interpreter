@@ -13,7 +13,6 @@ namespace number {
 class NumberTest : public ::testing::Test {
 public:
   NumberTest();
-  virtual ~NumberTest();
 
 protected:
   shared_ptr<Number> bin;
