@@ -57,9 +57,9 @@ TEST_F(NumberTest, SetterWorks) {
   bin->setValue("0x01110000");
   dec->setValue("0x0112");
   hex->setValue("070");
-  bin->setValue("-0x01110000");
-  dec->setValue("-0x0112");
-  hex->setValue("-070");
+  negativeBin->setValue("-0x01110000");
+  negativeDec->setValue("-0x0112");
+  negativeHex->setValue("-070");
 
   EXPECT_EQ("1110000", bin->getValue());
   EXPECT_EQ("112", dec->getValue());
