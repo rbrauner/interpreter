@@ -2,7 +2,6 @@
 
 #include "utility/charset/charset.h"
 #include "utility/number/number.h"
-#include <functional>
 #include <string>
 
 namespace utility {
@@ -21,8 +20,8 @@ protected:
   std::string m_value;
 
   // helpful methods
-  using StringReference = std::reference_wrapper<std::string>;
-  using ConstStringReference = std::reference_wrapper<const std::string>;
+  using StringReference = std::string &;
+  using ConstStringReference = const std::string &;
 
   void transformToLowerCase(StringReference value);
   void removeUselessCharactersAtBegining(StringReference value);
