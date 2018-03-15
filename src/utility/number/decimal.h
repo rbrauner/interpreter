@@ -8,7 +8,7 @@ namespace number {
 class Decimal : public NumberImpl {
 public:
   Decimal(std::string value);
-  Decimal(size_t value);
+  Decimal(int64_t value);
 
   bool operator==(const Decimal &d) const;
 

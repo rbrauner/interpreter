@@ -9,7 +9,8 @@ Decimal::Decimal(string value) : NumberImpl::NumberImpl{CharSet{"0123456789"}} {
   setValue(value);
 }
 
-Decimal::Decimal(size_t value) : NumberImpl::NumberImpl{CharSet{"0123456789"}} {
+Decimal::Decimal(int64_t value)
+    : NumberImpl::NumberImpl{CharSet{"0123456789"}} {
   string svalue = to_string(value);
   setValue(svalue);
 }
