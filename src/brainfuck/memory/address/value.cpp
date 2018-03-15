@@ -13,7 +13,11 @@ Value::Value(alias::Hexadecimal value, alias::Hexadecimal min,
              alias::Hexadecimal max)
     : m_value{make_shared<alias::Hexadecimal>(value)} {}
 
-alias::Binary Value::toBin() const {}
+alias::Binary Value::toBin() const {
+  std::string value = m_value->getValue();
+  alias::Binary bin{value};
+  return bin;
+}
 
 alias::Decimal Value::toDec() const {
   std::string value = m_value->getValue();
