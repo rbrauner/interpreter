@@ -12,13 +12,13 @@ TEST_F(ValueTest, InitializeProperlyWithDefaultMinAndMax) {
     Value decDefault{alias::Decimal{10}};
     Value hexDefault{alias::Hexadecimal{"a"}};
 
-    EXPECT_GE(INT8_MIN, stoi(binDefault.toDec().getValue()));
-    EXPECT_GE(INT8_MIN, stoi(decDefault.toDec().getValue()));
-    EXPECT_GE(INT8_MIN, stoi(hexDefault.toDec().getValue()));
+    EXPECT_LE(INT8_MIN, stoi(binDefault.toDec().getValue()));
+    EXPECT_LE(INT8_MIN, stoi(decDefault.toDec().getValue()));
+    EXPECT_LE(INT8_MIN, stoi(hexDefault.toDec().getValue()));
 
-    EXPECT_LE(INT8_MAX, stoi(binDefault.toDec().getValue()));
-    EXPECT_LE(INT8_MAX, stoi(decDefault.toDec().getValue()));
-    EXPECT_LE(INT8_MAX, stoi(hexDefault.toDec().getValue()));
+    EXPECT_GE(INT8_MAX, stoi(binDefault.toDec().getValue()));
+    EXPECT_GE(INT8_MAX, stoi(decDefault.toDec().getValue()));
+    EXPECT_GE(INT8_MAX, stoi(hexDefault.toDec().getValue()));
   } catch (...) {
     FAIL();
   }
@@ -33,13 +33,13 @@ TEST_F(ValueTest, InitializeProperlyWithCorrectMinAndMax) {
     Value fiveToTwentyFive{alias::Decimal{14}, alias::Decimal{5},
                            alias::Decimal{25}};
 
-    EXPECT_GE(-10, stoi(minusTenToMinusFive.toDec().getValue()));
-    EXPECT_GE(-5, stoi(minusFiveToTen.toDec().getValue()));
-    EXPECT_GE(5, stoi(fiveToTwentyFive.toDec().getValue()));
-
-    EXPECT_LE(-5, stoi(minusTenToMinusFive.toDec().getValue()));
-    EXPECT_LE(10, stoi(minusFiveToTen.toDec().getValue()));
+    EXPECT_LE(-10, stoi(minusTenToMinusFive.toDec().getValue()));
+    EXPECT_LE(-5, stoi(minusFiveToTen.toDec().getValue()));
     EXPECT_LE(5, stoi(fiveToTwentyFive.toDec().getValue()));
+
+    EXPECT_GE(-5, stoi(minusTenToMinusFive.toDec().getValue()));
+    EXPECT_GE(10, stoi(minusFiveToTen.toDec().getValue()));
+    EXPECT_GE(5, stoi(fiveToTwentyFive.toDec().getValue()));
   } catch (...) {
     FAIL();
   }
