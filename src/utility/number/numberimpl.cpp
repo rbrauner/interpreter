@@ -47,7 +47,14 @@ void NumberImpl::removeUselessCharactersAtBegining(StringReference value) {
 }
 
 void NumberImpl::checkIfNumberIsCorrect(ConstStringReference value) {
-  for (auto x : value) {
+  string temp = value;
+  if (value.size() > 0) {
+    if (value.at(0) == '-') {
+      temp = value.substr(1);
+    }
+  }
+
+  for (auto x : temp) {
     if (!m_charSet.checkIfExistsInCharSet(x)) {
       throw NumberIsNotCorrect{};
     }
