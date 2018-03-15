@@ -31,10 +31,25 @@ void NumberImpl::transformToLowerCase(StringReference value) {
 }
 
 void NumberImpl::removeUselessCharactersAtBegining(StringReference value) {
-  string minusIfNumberIsNegative = "";
-  if (value.at(0) == '-')
-    minusIfNumberIsNegative = '-';
+  bool minus = checkIfNumberIsNegative(value);
 
+  size_t i = calculateHowManyCharactersRemove(value);
+
+  setValueCorrectPartAndAddMinusIfNumberIsNegative(value, i, minus);
+}
+
+bool NumberImpl::checkIfNumberIsNegative(
+    NumberImpl::ConstStringReference value) {
+  if (value.size() > 0) {
+    if (value.at(0) == '-')
+      return true;
+  }
+
+  return false;
+}
+
+size_t NumberImpl::calculateHowManyCharactersRemove(
+    NumberImpl::ConstStringReference value) {
   size_t i = 0;
   for (auto x : value) {
     if (m_charSet.checkIfExistsInCharSet(x) && x != '0') {
@@ -43,20 +58,32 @@ void NumberImpl::removeUselessCharactersAtBegining(StringReference value) {
     i++;
   }
 
-  value = minusIfNumberIsNegative + value.substr(i);
+  return i;
 }
 
-void NumberImpl::checkIfNumberIsCorrect(ConstStringReference value) {
-  string temp = value;
-  if (value.size() > 0) {
-    if (value.at(0) == '-') {
-      temp = value.substr(1);
-    }
+void NumberImpl::setValueCorrectPartAndAddMinusIfNumberIsNegative(
+    NumberImpl::StringReference value, size_t position, bool isNegative) {
+  if (isNegative) {
+    value = '-' + value.substr(position);
+  } else {
+    value = value.substr(position);
   }
+}
 
-  for (auto x : temp) {
+void NumberImpl::checkIfNumberIsCorrect(string value) {
+  makeNegativeNumberPositive(value);
+
+  for (auto x : value) {
     if (!m_charSet.checkIfExistsInCharSet(x)) {
       throw NumberIsNotCorrect{};
+    }
+  }
+}
+
+void NumberImpl::makeNegativeNumberPositive(StringReference value) {
+  if (value.size() > 0) {
+    if (value.at(0) == '-') {
+      value = value.substr(1);
     }
   }
 }

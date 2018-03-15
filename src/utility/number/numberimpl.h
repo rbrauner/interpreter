@@ -25,7 +25,13 @@ protected:
 
   void transformToLowerCase(StringReference value);
   void removeUselessCharactersAtBegining(StringReference value);
-  void checkIfNumberIsCorrect(ConstStringReference value);
+  bool checkIfNumberIsNegative(ConstStringReference value);
+  size_t calculateHowManyCharactersRemove(ConstStringReference value);
+  void setValueCorrectPartAndAddMinusIfNumberIsNegative(StringReference value,
+                                                        size_t position,
+                                                        bool isNegative);
+  void checkIfNumberIsCorrect(std::string value);
+  void makeNegativeNumberPositive(StringReference value);
   void setMemberValueUsing(ConstStringReference value);
 };
 
