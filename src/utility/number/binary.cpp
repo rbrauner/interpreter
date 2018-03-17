@@ -22,6 +22,26 @@ bool Binary::operator==(const Binary &b) const {
     return false;
 }
 
+bool Binary::operator<(const utility::number::Binary &b) const {
+  auto first = stoi(binaryToDecimal(this->getValue()).getValue());
+  auto second = stoi(binaryToDecimal(b.getValue()).getValue());
+
+  if (first < second)
+    return true;
+  else
+    return false;
+}
+
+bool Binary::operator>(const utility::number::Binary &b) const {
+  auto first = stoi(binaryToDecimal(this->getValue()).getValue());
+  auto second = stoi(binaryToDecimal(b.getValue()).getValue());
+
+  if (first > second)
+    return true;
+  else
+    return false;
+}
+
 std::string Binary::getValue() const { return NumberImpl::getValue(); }
 
 void Binary::setValue(std::string value) { NumberImpl::setValue(value); }

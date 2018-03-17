@@ -23,6 +23,26 @@ bool Hexadecimal::operator==(const Hexadecimal &h) const {
     return false;
 }
 
+bool Hexadecimal::operator<(const utility::number::Hexadecimal &h) const {
+  auto first = stoi(hexadecimalToDecimal(this->getValue()).getValue());
+  auto second = stoi(hexadecimalToDecimal(h.getValue()).getValue());
+
+  if (first < second)
+    return true;
+  else
+    return false;
+}
+
+bool Hexadecimal::operator>(const utility::number::Hexadecimal &h) const {
+  auto first = stoi(hexadecimalToDecimal(this->getValue()).getValue());
+  auto second = stoi(hexadecimalToDecimal(h.getValue()).getValue());
+
+  if (first > second)
+    return true;
+  else
+    return false;
+}
+
 std::string Hexadecimal::getValue() const { return NumberImpl::getValue(); }
 
 void Hexadecimal::setValue(std::string value) { NumberImpl::setValue(value); }

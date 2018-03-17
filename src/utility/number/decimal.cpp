@@ -30,6 +30,26 @@ bool Decimal::operator==(const Decimal &d) const {
     return false;
 }
 
+bool Decimal::operator<(const utility::number::Decimal &d) const {
+  auto first = stoi(this->getValue());
+  auto second = stoi(d.getValue());
+
+  if (first < second)
+    return true;
+  else
+    return false;
+}
+
+bool Decimal::operator>(const utility::number::Decimal &d) const {
+  auto first = stoi(this->getValue());
+  auto second = stoi(d.getValue());
+
+  if (first > second)
+    return true;
+  else
+    return false;
+}
+
 string Decimal::getValue() const { return NumberImpl::getValue(); }
 
 void Decimal::setValue(string value) { NumberImpl::setValue(value); }
