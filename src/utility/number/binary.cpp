@@ -1,14 +1,10 @@
 #include "binary.h"
-#include "decimal.h"
-#include "hexadecimal.h"
+#include "utility/number/decimal.h"
+#include "utility/number/hexadecimal.h"
 #include <math.h>
-#include <sstream>
 #include <string>
 
-using std::dec;
-using std::hex;
 using std::string;
-using std::stringstream;
 using std::to_string;
 using utility::charset::CharSet;
 using utility::number::Binary;
@@ -31,19 +27,25 @@ std::string Binary::getValue() const { return NumberImpl::getValue(); }
 void Binary::setValue(std::string value) { NumberImpl::setValue(value); }
 
 Decimal utility::number::binaryToDecimal(const Binary &binary) {
+  string decimal = "";
   int64_t binNumber = stoi(binary.getValue());
-  stringstream decimal;
+  int64_t decNumber = 0;
+  int64_t remainder = 0;
+  int64_t i = 0;
 
-  decimal << dec << binNumber;
+  while (binNumber != 0) {
+    remainder = binNumber % 10;
+    binNumber /= 10;
+    decNumber += remainder * pow(2, i);
+    i++;
+  }
 
-  return decimal.str();
+  decimal = to_string(decNumber);
+  return Decimal{decimal};
 }
 
 Hexadecimal utility::number::binaryToHexadecimal(const Binary &binary) {
-  int64_t binNumber = stoi(binary.getValue());
-  stringstream hexadecimal;
-
-  hexadecimal << hex << binNumber;
-
-  return hexadecimal.str();
+  Decimal decimal = binaryToDecimal(binary);
+  Hexadecimal hexadecimal = decimalToHexadecimal(decimal);
+  return hexadecimal.getValue();
 }
