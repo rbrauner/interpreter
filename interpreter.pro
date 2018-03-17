@@ -33,7 +33,8 @@ HEADERS += \
     tests/brainfuck/memory/memorytest.h \
     tests/utility/charset/charsettest.h \
     tests/utility/number/numbertest.h \
-    tests/brainfuck/memory/address/valuetest.h
+    tests/brainfuck/memory/address/valuetest.h \
+    src/alias/common.h
 
 SOURCES += \
     src/brainfuck/instruction/instruction.cpp \
