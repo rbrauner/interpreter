@@ -5,6 +5,7 @@
 #include <sstream>
 #include <string>
 
+using std::dec;
 using std::hex;
 using std::string;
 using std::stringstream;
@@ -30,21 +31,12 @@ std::string Binary::getValue() const { return NumberImpl::getValue(); }
 void Binary::setValue(std::string value) { NumberImpl::setValue(value); }
 
 Decimal utility::number::binaryToDecimal(const Binary &binary) {
-  string decimal = "";
   int64_t binNumber = stoi(binary.getValue());
-  int64_t decNumber = 0;
-  int64_t remainder = 0;
-  int64_t i = 0;
+  stringstream decimal;
 
-  while (binNumber != 0) {
-    remainder = binNumber % 10;
-    binNumber /= 10;
-    decNumber += remainder + pow(2, i);
-    i++;
-  }
+  decimal << dec << binNumber;
 
-  decimal = to_string(decNumber);
-  return decimal;
+  return decimal.str();
 }
 
 Hexadecimal utility::number::binaryToHexadecimal(const Binary &binary) {
