@@ -5,6 +5,9 @@
 namespace utility {
 namespace number {
 
+class Binary;
+class Hexadecimal;
+
 class Decimal : public NumberImpl {
 public:
   Decimal(std::string value);
@@ -17,6 +20,9 @@ public:
 };
 
 using Dec = Decimal;
+
+Binary decToBin(const Decimal &decimal);
+Hexadecimal decToHex(const Decimal &decimal);
 
 } // namespace number
 } // namespace utility
