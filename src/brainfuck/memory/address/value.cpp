@@ -1,4 +1,5 @@
 #include "value.h"
+#include "brainfuck/memory/address/exceptions.h"
 
 using brainfuck::memory::address::Value;
 using std::make_shared;
@@ -6,14 +7,35 @@ using std::string;
 using utility::number::decimalToBinary;
 
 Value::Value(alias::Binary value, alias::Binary min, alias::Binary max)
-    : m_value{make_shared<alias::Binary>(value)}, type{"Binary"} {}
+    : m_value{make_shared<alias::Binary>(value)}, type{"Binary"} {
+  if (min == max)
+    throw exception::MinEqualToMax{};
+  else if (min > max)
+    throw exception::MinGreaterThanMax{};
+  else if (value < min || value > max)
+    throw exception::OutOfRange{};
+}
 
 Value::Value(alias::Decimal value, alias::Decimal min, alias::Decimal max)
-    : m_value{make_shared<alias::Decimal>(value)}, type{"Decimal"} {}
+    : m_value{make_shared<alias::Decimal>(value)}, type{"Decimal"} {
+  if (min == max)
+    throw exception::MinEqualToMax{};
+  else if (min > max)
+    throw exception::MinGreaterThanMax{};
+  else if (value < min || value > max)
+    throw exception::OutOfRange{};
+}
 
 Value::Value(alias::Hexadecimal value, alias::Hexadecimal min,
              alias::Hexadecimal max)
-    : m_value{make_shared<alias::Hexadecimal>(value)}, type{"Hexadecimal"} {}
+    : m_value{make_shared<alias::Hexadecimal>(value)}, type{"Hexadecimal"} {
+  if (min == max)
+    throw exception::MinEqualToMax{};
+  else if (min > max)
+    throw exception::MinGreaterThanMax{};
+  else if (value < min || value > max)
+    throw exception::OutOfRange{};
+}
 
 alias::Binary Value::toBin() const {
   alias::Binary bin{"0"};
