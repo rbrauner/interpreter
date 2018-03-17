@@ -68,21 +68,21 @@ TEST_F(NumberTest, SetterWorks) {
   EXPECT_EQ("-70", negativeHex->getValue());
 }
 
-TEST(NumberTest, BinaryConversionsWork) {
+TEST_F(NumberTest, BinaryConversionsWork) {
   alias::Binary twentyFive = alias::Binary{"11001"};
 
   EXPECT_EQ(alias::Decimal{"25"}, binaryToDecimal(twentyFive));
   EXPECT_EQ(alias::Hexadecimal{"19"}, binaryToHexadecimal(twentyFive));
 }
 
-TEST(NumberTest, DecimalConversionsWork) {
+TEST_F(NumberTest, DecimalConversionsWork) {
   alias::Decimal twentyFive = alias::Decimal{"25"};
 
   EXPECT_EQ(alias::Binary{"11001"}, decimalToBinary(twentyFive));
   EXPECT_EQ(alias::Hexadecimal{"19"}, decimalToHexadecimal(twentyFive));
 }
 
-TEST(NumberTest, HexadecimalConversionsWork) {
+TEST_F(NumberTest, HexadecimalConversionsWork) {
   alias::Hexadecimal twentyFive = alias::Hexadecimal{"19"};
 
   EXPECT_EQ(alias::Binary{"11001"}, hexadecimalToBinary(twentyFive));
