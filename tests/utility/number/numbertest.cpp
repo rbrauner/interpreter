@@ -71,20 +71,20 @@ TEST_F(NumberTest, SetterWorks) {
 TEST(NumberTest, BinaryConversionsWork) {
   alias::Binary twentyFive = alias::Binary{"11001"};
 
-  EXPECT_EQ(alias::Decimal{"25"}, binToDec(twentyFive));
-  EXPECT_EQ(alias::Decimal{"19"}, binToHex(twentyFive));
+  EXPECT_EQ(alias::Decimal{"25"}, binaryToDecimal(twentyFive));
+  EXPECT_EQ(alias::Hexadecimal{"19"}, binaryToHexadecimal(twentyFive));
 }
 
 TEST(NumberTest, DecimalConversionsWork) {
   alias::Decimal twentyFive = alias::Decimal{"25"};
 
-  EXPECT_EQ(alias::Binary{"11001"}, decToBin(twentyFive));
-  EXPECT_EQ(alias::Hexadecimal{"19"}, decToHex(twentyFive));
+  EXPECT_EQ(alias::Binary{"11001"}, decimalToBinary(twentyFive));
+  EXPECT_EQ(alias::Hexadecimal{"19"}, decimalToHexadecimal(twentyFive));
 }
 
 TEST(NumberTest, HexadecimalConversionsWork) {
   alias::Hexadecimal twentyFive = alias::Hexadecimal{"19"};
 
-  EXPECT_EQ(alias::Binary{"11001"}, hexToBin(twentyFive));
-  EXPECT_EQ(alias::Decimal{"25"}, hexToDec(twentyFive));
+  EXPECT_EQ(alias::Binary{"11001"}, hexadecimalToBinary(twentyFive));
+  EXPECT_EQ(alias::Decimal{"25"}, hexadecimalToDecimal(twentyFive));
 }

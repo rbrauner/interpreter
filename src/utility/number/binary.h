@@ -20,8 +20,8 @@ public:
 
 using Bin = Binary;
 
-Decimal binToDec(const Binary &binary);
-Hexadecimal binToHex(const Binary &binary);
+Decimal binaryToDecimal(const Binary &binary);
+Hexadecimal binaryToHexadecimal(const Binary &binary);
 
 } // namespace number
 } // namespace utility

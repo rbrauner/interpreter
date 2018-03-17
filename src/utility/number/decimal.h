@@ -21,8 +21,8 @@ public:
 
 using Dec = Decimal;
 
-Binary decToBin(const Decimal &decimal);
-Hexadecimal decToHex(const Decimal &decimal);
+Binary decimalToBinary(const Decimal &decimal);
+Hexadecimal decimalToHexadecimal(const Decimal &decimal);
 
 } // namespace number
 } // namespace utility
