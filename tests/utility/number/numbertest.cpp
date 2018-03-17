@@ -68,3 +68,9 @@ TEST_F(NumberTest, SetterWorks) {
   EXPECT_EQ("-112", negativeDec->getValue());
   EXPECT_EQ("-70", negativeHex->getValue());
 }
+
+TEST(NumberTest, BinaryConversionsWork) {}
+
+TEST(NumberTest, DecimalConversionsWork) {}
+
+TEST(NumberTest, HexadecimalConversionsWork) {}
