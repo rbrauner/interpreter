@@ -39,7 +39,7 @@ TEST_F(ValueTest, InitializeProperlyWithCorrectMinAndMax) {
 
     EXPECT_GE(-5, stoi(minusTenToMinusFive.toDec().getValue()));
     EXPECT_GE(10, stoi(minusFiveToTen.toDec().getValue()));
-    EXPECT_GE(5, stoi(fiveToTwentyFive.toDec().getValue()));
+    EXPECT_GE(25, stoi(fiveToTwentyFive.toDec().getValue()));
   } catch (...) {
     FAIL();
   }
