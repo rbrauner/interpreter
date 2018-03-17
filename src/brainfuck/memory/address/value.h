@@ -1,6 +1,7 @@
 #pragma once
 
 #include "alias/number.h"
+#include "brainfuck/memory/address/type.h"
 #include <cstdint>
 #include <string>
 
@@ -27,6 +28,7 @@ public:
 
 private:
   alias::NumberPointer m_value;
+  Type type;
 };
 
 } // namespace address
