@@ -15,7 +15,7 @@ public:
   Value getValue() const;
   void setValue(Value value);
 
-  bool operator==(const Address &a) const;
+  bool operator==(const Address &address) const;
 
 private:
   Position m_position;

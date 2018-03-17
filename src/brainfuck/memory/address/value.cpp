@@ -90,6 +90,6 @@ alias::Hexadecimal Value::toHex() const {
   return hex;
 }
 
-bool Value::operator==(const Value &v) const {
-  return (m_value == v.m_value) ? true : false;
+bool Value::operator==(const Value &value) const {
+  return (this->m_value == value.m_value) ? true : false;
 }

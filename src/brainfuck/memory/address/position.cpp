@@ -24,6 +24,6 @@ alias::Hexadecimal Position::toHex() const {
   return hex;
 }
 
-bool Position::operator==(const Position &p) const {
-  return (m_position == p.m_position) ? true : false;
+bool Position::operator==(const Position &position) const {
+  return (this->m_position == position.m_position) ? true : false;
 }

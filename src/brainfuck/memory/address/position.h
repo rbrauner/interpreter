@@ -16,7 +16,7 @@ public:
   alias::Decimal toDec() const;
   alias::Hexadecimal toHex() const;
 
-  bool operator==(const Position &p) const;
+  bool operator==(const Position &position) const;
 
 private:
   alias::NumberPointer m_position;

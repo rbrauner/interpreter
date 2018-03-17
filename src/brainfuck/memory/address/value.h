@@ -24,7 +24,7 @@ public:
   alias::Decimal toDec() const;
   alias::Hexadecimal toHex() const;
 
-  bool operator==(const Value &v) const;
+  bool operator==(const Value &value) const;
 
 private:
   alias::NumberPointer m_value;
