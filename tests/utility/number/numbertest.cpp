@@ -1,19 +1,18 @@
 #include "numbertest.h"
+#include "alias/number.h"
 #include "utility/number/binary.h"
 #include "utility/number/decimal.h"
 #include "utility/number/hexadecimal.h"
 
 using std::make_shared;
-using utility::number::Bin;
-using utility::number::Dec;
-using utility::number::Hex;
 using utility::number::NumberTest;
 
 NumberTest::NumberTest()
-    : bin{make_shared<Bin>("111100")}, dec{make_shared<Dec>(60)},
-      hex{make_shared<Hex>("3c")}, negativeBin{make_shared<Bin>("-111100")},
-      negativeDec{make_shared<Dec>(-60)}, negativeHex{make_shared<Hex>("-3c")} {
-}
+    : bin{make_shared<Binary>("111100")}, dec{make_shared<Decimal>(60)},
+      hex{make_shared<Hexadecimal>("3c")}, negativeBin{make_shared<Binary>(
+                                               "-111100")},
+      negativeDec{make_shared<Decimal>(-60)},
+      negativeHex{make_shared<Hexadecimal>("-3c")} {}
 
 TEST_F(NumberTest, CreateProperly) {
   EXPECT_EQ("111100", bin->getValue());
@@ -69,8 +68,23 @@ TEST_F(NumberTest, SetterWorks) {
   EXPECT_EQ("-70", negativeHex->getValue());
 }
 
-TEST(NumberTest, BinaryConversionsWork) {}
+TEST(NumberTest, BinaryConversionsWork) {
+  alias::Binary twentyFive = alias::Binary{"11001"};
 
-TEST(NumberTest, DecimalConversionsWork) {}
+  EXPECT_EQ(alias::Decimal{"25"}, binToDec(twentyFive));
+  EXPECT_EQ(alias::Decimal{"19"}, binToHex(twentyFive));
+}
 
-TEST(NumberTest, HexadecimalConversionsWork) {}
+TEST(NumberTest, DecimalConversionsWork) {
+  alias::Decimal twentyFive = alias::Decimal{"25"};
+
+  EXPECT_EQ(alias::Binary{"11001"}, decToBin(twentyFive));
+  EXPECT_EQ(alias::Hexadecimal{"19"}, decToHex(twentyFive));
+}
+
+TEST(NumberTest, HexadecimalConversionsWork) {
+  alias::Hexadecimal twentyFive = alias::Hexadecimal{"19"};
+
+  EXPECT_EQ(alias::Binary{"11001"}, hexToBin(twentyFive));
+  EXPECT_EQ(alias::Decimal{"25"}, hexToDec(twentyFive));
+}
