@@ -1,9 +1,8 @@
 #pragma once
 
 #include "alias/common.h"
+#include "number.h"
 #include "utility/charset/charset.h"
-#include "utility/number/number.h"
-#include <string>
 
 namespace utility {
 namespace number {

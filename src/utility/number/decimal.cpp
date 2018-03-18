@@ -1,6 +1,6 @@
 #include "decimal.h"
-#include "utility/number/binary.h"
-#include "utility/number/hexadecimal.h"
+#include "binary.h"
+#include "hexadecimal.h"
 #include <math.h>
 #include <sstream>
 

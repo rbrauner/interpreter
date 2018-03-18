@@ -1,6 +1,6 @@
 #include "binary.h"
-#include "utility/number/decimal.h"
-#include "utility/number/hexadecimal.h"
+#include "decimal.h"
+#include "hexadecimal.h"
 #include <math.h>
 #include <string>
 
@@ -45,9 +45,9 @@ bool Binary::operator>(const Binary &binary) const {
     return false;
 }
 
-std::string Binary::getValue() const { return NumberImpl::getValue(); }
+string Binary::getValue() const { return NumberImpl::getValue(); }
 
-void Binary::setValue(std::string value) { NumberImpl::setValue(value); }
+void Binary::setValue(string value) { NumberImpl::setValue(value); }
 
 Decimal utility::number::binaryToDecimal(const Binary &binary) {
   string decimal = "";

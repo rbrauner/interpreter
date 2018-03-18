@@ -1,6 +1,6 @@
 #include "numberimpl.h"
 
-#include "utility/number/numberexceptions.h"
+#include "utility/number/exceptions.h"
 #include <algorithm>
 
 using std::string;

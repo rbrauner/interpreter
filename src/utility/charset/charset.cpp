@@ -1,10 +1,6 @@
 #include "charset.h"
 #include "exceptions.h"
-#include <algorithm>
 
-using std::begin;
-using std::end;
-using std::find;
 using std::initializer_list;
 using std::string;
 using utility::charset::CharSet;

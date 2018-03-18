@@ -27,7 +27,6 @@ HEADERS += \
     src/utility/number/decimal.h \
     src/utility/number/hexadecimal.h \
     src/utility/number/number.h \
-    src/utility/number/numberexceptions.h \
     src/utility/number/numberimpl.h \
     tests/brainfuck/memory/address/addresstest.h \
     tests/brainfuck/memory/memorytest.h \
@@ -36,7 +35,8 @@ HEADERS += \
     tests/brainfuck/memory/address/valuetest.h \
     src/alias/common.h \
     src/brainfuck/memory/address/type.h \
-    src/brainfuck/memory/address/exceptions.h
+    src/brainfuck/memory/address/exceptions.h \
+    src/utility/number/exceptions.h
 
 SOURCES += \
     src/brainfuck/instruction/instruction.cpp \
@@ -47,7 +47,6 @@ SOURCES += \
     src/brainfuck/memory/memory.cpp \
     src/brainfuck/memory/memorypointer.cpp \
     src/utility/charset/charset.cpp \
-    src/utility/charset/exceptions.cpp \
     src/utility/number/binary.cpp \
     src/utility/number/decimal.cpp \
     src/utility/number/hexadecimal.cpp \

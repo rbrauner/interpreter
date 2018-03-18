@@ -1,6 +1,6 @@
 #include "hexadecimal.h"
-#include "utility/number/binary.h"
-#include "utility/number/decimal.h"
+#include "binary.h"
+#include "decimal.h"
 #include <sstream>
 
 using std::hex;
@@ -46,9 +46,9 @@ bool Hexadecimal::operator>(const Hexadecimal &hexadecimal) const {
     return false;
 }
 
-std::string Hexadecimal::getValue() const { return NumberImpl::getValue(); }
+string Hexadecimal::getValue() const { return NumberImpl::getValue(); }
 
-void Hexadecimal::setValue(std::string value) { NumberImpl::setValue(value); }
+void Hexadecimal::setValue(string value) { NumberImpl::setValue(value); }
 
 Binary utility::number::hexadecimalToBinary(const Hexadecimal &hexadecimal) {
   Decimal decimal = hexadecimalToDecimal(hexadecimal);
@@ -58,7 +58,7 @@ Binary utility::number::hexadecimalToBinary(const Hexadecimal &hexadecimal) {
 
 Decimal utility::number::hexadecimalToDecimal(const Hexadecimal &hexadecimal) {
   int64_t decimalNumber;
-  std::stringstream ss;
+  stringstream ss;
 
   ss << hexadecimal.getValue();
   ss >> hex >> decimalNumber;
