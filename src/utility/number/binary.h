@@ -12,9 +12,9 @@ class Binary : public NumberImpl {
 public:
   Binary(std::string value);
 
-  bool operator==(const Binary &b) const;
-  bool operator<(const Binary &b) const;
-  bool operator>(const Binary &b) const;
+  bool operator==(const Binary &binary) const;
+  bool operator<(const Binary &binary) const;
+  bool operator>(const Binary &binary) const;
 
   std::string getValue() const override;
   void setValue(std::string value) override;

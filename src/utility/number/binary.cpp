@@ -15,16 +15,19 @@ Binary::Binary(string value) : NumberImpl::NumberImpl{CharSet{"01"}} {
   setValue(value);
 }
 
-bool Binary::operator==(const Binary &b) const {
-  if (b.getValue() == this->getValue())
+bool Binary::operator==(const Binary &binary) const {
+  auto first = stoi(binaryToDecimal(this->getValue()).getValue());
+  auto second = stoi(binaryToDecimal(binary.getValue()).getValue());
+
+  if (first == second)
     return true;
   else
     return false;
 }
 
-bool Binary::operator<(const utility::number::Binary &b) const {
+bool Binary::operator<(const Binary &binary) const {
   auto first = stoi(binaryToDecimal(this->getValue()).getValue());
-  auto second = stoi(binaryToDecimal(b.getValue()).getValue());
+  auto second = stoi(binaryToDecimal(binary.getValue()).getValue());
 
   if (first < second)
     return true;
@@ -32,9 +35,9 @@ bool Binary::operator<(const utility::number::Binary &b) const {
     return false;
 }
 
-bool Binary::operator>(const utility::number::Binary &b) const {
+bool Binary::operator>(const Binary &binary) const {
   auto first = stoi(binaryToDecimal(this->getValue()).getValue());
-  auto second = stoi(binaryToDecimal(b.getValue()).getValue());
+  auto second = stoi(binaryToDecimal(binary.getValue()).getValue());
 
   if (first > second)
     return true;

@@ -12,9 +12,9 @@ class Hexadecimal : public NumberImpl {
 public:
   Hexadecimal(std::string value);
 
-  bool operator==(const Hexadecimal &h) const;
-  bool operator<(const Hexadecimal &h) const;
-  bool operator>(const Hexadecimal &h) const;
+  bool operator==(const Hexadecimal &hexadecimal) const;
+  bool operator<(const Hexadecimal &hexadecimal) const;
+  bool operator>(const Hexadecimal &hexadecimal) const;
 
   std::string getValue() const override;
   void setValue(std::string value) override;

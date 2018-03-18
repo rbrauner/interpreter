@@ -23,16 +23,19 @@ Decimal::Decimal(int64_t value)
   setValue(svalue);
 }
 
-bool Decimal::operator==(const Decimal &d) const {
-  if (d.getValue() == this->getValue())
+bool Decimal::operator==(const Decimal &decimal) const {
+  auto first = stoi(this->getValue());
+  auto second = stoi(decimal.getValue());
+
+  if (first == second)
     return true;
   else
     return false;
 }
 
-bool Decimal::operator<(const utility::number::Decimal &d) const {
+bool Decimal::operator<(const Decimal &decimal) const {
   auto first = stoi(this->getValue());
-  auto second = stoi(d.getValue());
+  auto second = stoi(decimal.getValue());
 
   if (first < second)
     return true;
@@ -40,9 +43,9 @@ bool Decimal::operator<(const utility::number::Decimal &d) const {
     return false;
 }
 
-bool Decimal::operator>(const utility::number::Decimal &d) const {
+bool Decimal::operator>(const Decimal &decimal) const {
   auto first = stoi(this->getValue());
-  auto second = stoi(d.getValue());
+  auto second = stoi(decimal.getValue());
 
   if (first > second)
     return true;

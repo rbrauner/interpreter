@@ -17,7 +17,7 @@ public:
 
 protected:
   static constexpr int howMany = 1000;
-  std::vector<::brainfuck::memory::address::Address> addresses;
+  std::vector<Address> addresses;
 };
 
 } // namespace address

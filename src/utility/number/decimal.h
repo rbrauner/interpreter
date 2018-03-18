@@ -13,9 +13,9 @@ public:
   Decimal(std::string value);
   Decimal(int64_t value);
 
-  bool operator==(const Decimal &d) const;
-  bool operator<(const Decimal &d) const;
-  bool operator>(const Decimal &d) const;
+  bool operator==(const Decimal &decimal) const;
+  bool operator<(const Decimal &decimal) const;
+  bool operator>(const Decimal &decimal) const;
 
   std::string getValue() const override;
   void setValue(std::string value) override;
