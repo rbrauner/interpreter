@@ -10,6 +10,7 @@ using brainfuck::memory::address::Value;
 AddressTest::AddressTest() { emptyInitialize(); }
 
 void AddressTest::emptyInitialize() {
+  Address a{Position{1}, Value{alias::Decimal{"1"}}};
   addresses.clear();
   for (auto i = 0; i < howMany; i++) {
     addresses.push_back(Address{Position{i}});

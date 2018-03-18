@@ -1,11 +1,13 @@
 #pragma once
 
+#include <exception>
+
 namespace utility {
 namespace number {
 namespace exception {
 
-class NumberIsNotCorrect {};
+class NumberIsNotCorrect : std::exception {};
 
 } // namespace exception
 } // namespace number
-} // namespace utilities
+} // namespace utility

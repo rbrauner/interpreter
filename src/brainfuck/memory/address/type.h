@@ -1,6 +1,5 @@
 #pragma once
 
-#include "alias/common.h"
 #include <string>
 
 namespace brainfuck {

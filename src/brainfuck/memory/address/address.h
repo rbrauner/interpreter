@@ -1,5 +1,6 @@
 #pragma once
 
+#include "alias/number.h"
 #include "brainfuck/memory/address/position.h"
 #include "brainfuck/memory/address/value.h"
 

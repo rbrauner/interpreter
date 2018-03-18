@@ -16,8 +16,12 @@ Value::Value(alias::Binary value, alias::Binary min, alias::Binary max)
     throw exception::OutOfRange{};
 }
 
+#include <iostream>
+
 Value::Value(alias::Decimal value, alias::Decimal min, alias::Decimal max)
     : m_value{make_shared<alias::Decimal>(value)}, type{"Decimal"} {
+  std::cout << min.getValue() << ' ' << max.getValue() << ' '
+            << value.getValue() << std::endl;
   if (min == max)
     throw exception::MinEqualToMax{};
   else if (min > max)

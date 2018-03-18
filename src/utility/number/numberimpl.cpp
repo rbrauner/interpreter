@@ -26,11 +26,12 @@ void NumberImpl::setValue(string value) {
   }
 }
 
-void NumberImpl::transformToLowerCase(StringReference value) {
+void NumberImpl::transformToLowerCase(alias::StringReference value) {
   transform(value.begin(), value.end(), value.begin(), ::tolower);
 }
 
-void NumberImpl::removeUselessCharactersAtBegining(StringReference value) {
+void NumberImpl::removeUselessCharactersAtBegining(
+    alias::StringReference value) {
   bool minus = checkIfNumberIsNegative(value);
 
   size_t i = calculateHowManyCharactersRemove(value);
@@ -38,8 +39,7 @@ void NumberImpl::removeUselessCharactersAtBegining(StringReference value) {
   setValueCorrectPartAndAddMinusIfNumberIsNegative(value, i, minus);
 }
 
-bool NumberImpl::checkIfNumberIsNegative(
-    NumberImpl::ConstStringReference value) {
+bool NumberImpl::checkIfNumberIsNegative(alias::ConstStringReference value) {
   if (value.size() > 0) {
     if (value.at(0) == '-')
       return true;
@@ -49,7 +49,7 @@ bool NumberImpl::checkIfNumberIsNegative(
 }
 
 size_t NumberImpl::calculateHowManyCharactersRemove(
-    NumberImpl::ConstStringReference value) {
+    alias::ConstStringReference value) {
   size_t i = 0;
   for (auto x : value) {
     if (m_charSet.checkIfExistsInCharSet(x) && x != '0') {
@@ -62,7 +62,7 @@ size_t NumberImpl::calculateHowManyCharactersRemove(
 }
 
 void NumberImpl::setValueCorrectPartAndAddMinusIfNumberIsNegative(
-    NumberImpl::StringReference value, size_t position, bool isNegative) {
+    alias::StringReference value, size_t position, bool isNegative) {
   if (isNegative) {
     value = '-' + value.substr(position);
   } else {
@@ -80,7 +80,7 @@ void NumberImpl::checkIfNumberIsCorrect(string value) {
   }
 }
 
-void NumberImpl::makeNegativeNumberPositive(StringReference value) {
+void NumberImpl::makeNegativeNumberPositive(alias::StringReference value) {
   if (value.size() > 0) {
     if (value.at(0) == '-') {
       value = value.substr(1);
@@ -88,6 +88,6 @@ void NumberImpl::makeNegativeNumberPositive(StringReference value) {
   }
 }
 
-void NumberImpl::setMemberValueUsing(ConstStringReference value) {
+void NumberImpl::setMemberValueUsing(alias::ConstStringReference value) {
   m_value = value;
 }

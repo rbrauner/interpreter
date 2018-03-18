@@ -2,7 +2,6 @@
 
 #include "brainfuck/memory/address/address.h"
 #include "gtest/gtest_prod.h"
-#include <cstdint>
 #include <vector>
 
 namespace brainfuck {
@@ -23,7 +22,7 @@ private:
   FRIEND_TEST(MemoryTest, MemoryPointerIsSetToCorrectPosition);
   FRIEND_TEST(MemoryTest, MemoryPointerSetterWorksOnPositionWherePointerIsSet);
 
-  std::vector<brainfuck::memory::address::Address> m_memory;
+  std::vector<address::Address> m_memory;
 };
 
 } // namespace memory

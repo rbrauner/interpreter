@@ -3,7 +3,6 @@
 #include "alias/number.h"
 #include "brainfuck/memory/address/type.h"
 #include <cstdint>
-#include <string>
 
 namespace brainfuck {
 namespace memory {
