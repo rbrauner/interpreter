@@ -11,8 +11,8 @@ namespace address {
 
 class Value {
 public:
-  Value(alias::Binary value, alias::Binary min = alias::Binary{"10000000"},
-        alias::Binary max = alias::Binary{"01111111"});
+  Value(alias::Binary value, alias::Binary min = alias::Binary{"-1111111"},
+        alias::Binary max = alias::Binary{"1111111"});
   Value(alias::Decimal value,
         alias::Decimal min = alias::Decimal{std::to_string(INT8_MIN)},
         alias::Decimal max = alias::Decimal{std::to_string(INT8_MAX)});
