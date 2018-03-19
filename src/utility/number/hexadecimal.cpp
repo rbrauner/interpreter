@@ -17,8 +17,10 @@ Hexadecimal::Hexadecimal(std::string value)
 }
 
 bool Hexadecimal::operator==(const Hexadecimal &hexadecimal) const {
-  auto first = stoi(hexadecimalToDecimal(this->getValue()).getValue());
-  auto second = stoi(hexadecimalToDecimal(hexadecimal.getValue()).getValue());
+  auto first =
+      stoi(hexadecimalToDecimal(Hexadecimal{this->getValue()}).getValue());
+  auto second = stoi(
+      hexadecimalToDecimal(Hexadecimal{hexadecimal.getValue()}).getValue());
 
   if (first == second)
     return true;
@@ -27,8 +29,10 @@ bool Hexadecimal::operator==(const Hexadecimal &hexadecimal) const {
 }
 
 bool Hexadecimal::operator<(const Hexadecimal &hexadecimal) const {
-  auto first = stoi(hexadecimalToDecimal(this->getValue()).getValue());
-  auto second = stoi(hexadecimalToDecimal(hexadecimal.getValue()).getValue());
+  auto first =
+      stoi(hexadecimalToDecimal(Hexadecimal{this->getValue()}).getValue());
+  auto second = stoi(
+      hexadecimalToDecimal(Hexadecimal{hexadecimal.getValue()}).getValue());
 
   if (first < second)
     return true;
@@ -37,8 +41,10 @@ bool Hexadecimal::operator<(const Hexadecimal &hexadecimal) const {
 }
 
 bool Hexadecimal::operator>(const Hexadecimal &hexadecimal) const {
-  auto first = stoi(hexadecimalToDecimal(this->getValue()).getValue());
-  auto second = stoi(hexadecimalToDecimal(hexadecimal.getValue()).getValue());
+  auto first =
+      stoi(hexadecimalToDecimal(Hexadecimal{this->getValue()}).getValue());
+  auto second = stoi(
+      hexadecimalToDecimal(Hexadecimal{hexadecimal.getValue()}).getValue());
 
   if (first > second)
     return true;

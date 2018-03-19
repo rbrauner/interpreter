@@ -16,8 +16,8 @@ Binary::Binary(string value) : NumberImpl::NumberImpl{CharSet{"01"}} {
 }
 
 bool Binary::operator==(const Binary &binary) const {
-  auto first = stoi(binaryToDecimal(this->getValue()).getValue());
-  auto second = stoi(binaryToDecimal(binary.getValue()).getValue());
+  auto first = stoi(binaryToDecimal(Binary{this->getValue()}).getValue());
+  auto second = stoi(binaryToDecimal(Binary{binary.getValue()}).getValue());
 
   if (first == second)
     return true;
@@ -26,8 +26,8 @@ bool Binary::operator==(const Binary &binary) const {
 }
 
 bool Binary::operator<(const Binary &binary) const {
-  auto first = stoi(binaryToDecimal(this->getValue()).getValue());
-  auto second = stoi(binaryToDecimal(binary.getValue()).getValue());
+  auto first = stoi(binaryToDecimal(Binary{this->getValue()}).getValue());
+  auto second = stoi(binaryToDecimal(Binary{binary.getValue()}).getValue());
 
   if (first < second)
     return true;
@@ -36,8 +36,8 @@ bool Binary::operator<(const Binary &binary) const {
 }
 
 bool Binary::operator>(const Binary &binary) const {
-  auto first = stoi(binaryToDecimal(this->getValue()).getValue());
-  auto second = stoi(binaryToDecimal(binary.getValue()).getValue());
+  auto first = stoi(binaryToDecimal(Binary{this->getValue()}).getValue());
+  auto second = stoi(binaryToDecimal(Binary{binary.getValue()}).getValue());
 
   if (first > second)
     return true;
@@ -70,5 +70,5 @@ Decimal utility::number::binaryToDecimal(const Binary &binary) {
 Hexadecimal utility::number::binaryToHexadecimal(const Binary &binary) {
   Decimal decimal = binaryToDecimal(binary);
   Hexadecimal hexadecimal = decimalToHexadecimal(decimal);
-  return hexadecimal.getValue();
+  return Hexadecimal{hexadecimal.getValue()};
 }

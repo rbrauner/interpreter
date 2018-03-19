@@ -4,6 +4,9 @@
 #include "utility/number/decimal.h"
 #include "utility/number/hexadecimal.h"
 
+using alias::Binary;
+using alias::Decimal;
+using alias::Hexadecimal;
 using std::make_shared;
 using utility::number::NumberTest;
 
@@ -69,22 +72,22 @@ TEST_F(NumberTest, SetterWorks) {
 }
 
 TEST_F(NumberTest, BinaryConversionsWork) {
-  alias::Binary twentyFive = alias::Binary{"11001"};
+  Binary twentyFive = Binary{"11001"};
 
-  EXPECT_EQ(alias::Decimal{"25"}, binaryToDecimal(twentyFive));
-  EXPECT_EQ(alias::Hexadecimal{"19"}, binaryToHexadecimal(twentyFive));
+  EXPECT_EQ(Decimal{"25"}, binaryToDecimal(twentyFive));
+  EXPECT_EQ(Hexadecimal{"19"}, binaryToHexadecimal(twentyFive));
 }
 
 TEST_F(NumberTest, DecimalConversionsWork) {
-  alias::Decimal twentyFive = alias::Decimal{"25"};
+  Decimal twentyFive = Decimal{"25"};
 
-  EXPECT_EQ(alias::Binary{"11001"}, decimalToBinary(twentyFive));
-  EXPECT_EQ(alias::Hexadecimal{"19"}, decimalToHexadecimal(twentyFive));
+  EXPECT_EQ(Binary{"11001"}, decimalToBinary(twentyFive));
+  EXPECT_EQ(Hexadecimal{"19"}, decimalToHexadecimal(twentyFive));
 }
 
 TEST_F(NumberTest, HexadecimalConversionsWork) {
-  alias::Hexadecimal twentyFive = alias::Hexadecimal{"19"};
+  Hexadecimal twentyFive = Hexadecimal{"19"};
 
-  EXPECT_EQ(alias::Binary{"11001"}, hexadecimalToBinary(twentyFive));
-  EXPECT_EQ(alias::Decimal{"25"}, hexadecimalToDecimal(twentyFive));
+  EXPECT_EQ(Binary{"11001"}, hexadecimalToBinary(twentyFive));
+  EXPECT_EQ(Decimal{"25"}, hexadecimalToDecimal(twentyFive));
 }

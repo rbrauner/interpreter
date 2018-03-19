@@ -1,7 +1,11 @@
 #include "memorytest.h"
 
+using alias::Binary;
+using alias::Decimal;
+using alias::Hexadecimal;
 using brainfuck::memory::address::Value;
 using std::make_shared;
+using std::out_of_range;
 
 namespace brainfuck {
 namespace memory {
@@ -13,43 +17,41 @@ MemoryTest::MemoryTest() : m_memory{1000} {
 }
 
 TEST_F(MemoryTest, InitializeMemoryProperly) {
-  EXPECT_THROW(m_memory.m_memory.at(-1).getValue().toDec(), std::out_of_range);
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(0).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(1).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(499).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(500).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(501).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(998).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(999).getValue().toDec());
-  EXPECT_THROW(m_memory.m_memory.at(1000).getValue().toDec(),
-               std::out_of_range);
+  EXPECT_THROW(m_memory.m_memory.at(-1).getValue().toDec(), out_of_range);
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(0).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(1).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(499).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(500).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(501).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(998).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(999).getValue().toDec());
+  EXPECT_THROW(m_memory.m_memory.at(1000).getValue().toDec(), out_of_range);
 }
 
 TEST_F(MemoryTest, ClearWorks) {
-  m_memory.m_memory.at(0).setValue(Value{alias::Decimal{"1"}});
-  m_memory.m_memory.at(100).setValue(Value{alias::Decimal{"1"}});
-  m_memory.m_memory.at(500).setValue(Value{alias::Decimal{"1"}});
-  m_memory.m_memory.at(800).setValue(Value{alias::Decimal{"1"}});
-  m_memory.m_memory.at(999).setValue(Value{alias::Decimal{"1"}});
+  m_memory.m_memory.at(0).setValue(Value{Decimal{"1"}});
+  m_memory.m_memory.at(100).setValue(Value{Decimal{"1"}});
+  m_memory.m_memory.at(500).setValue(Value{Decimal{"1"}});
+  m_memory.m_memory.at(800).setValue(Value{Decimal{"1"}});
+  m_memory.m_memory.at(999).setValue(Value{Decimal{"1"}});
 
   m_memory.clear();
 
-  EXPECT_THROW(m_memory.m_memory.at(-1).getValue().toDec(), std::out_of_range);
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(0).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(1).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(99).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(100).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(101).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(499).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(500).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(501).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(799).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(800).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(801).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(998).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(999).getValue().toDec());
-  EXPECT_THROW(m_memory.m_memory.at(1000).getValue().toDec(),
-               std::out_of_range);
+  EXPECT_THROW(m_memory.m_memory.at(-1).getValue().toDec(), out_of_range);
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(0).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(1).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(99).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(100).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(101).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(499).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(500).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(501).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(799).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(800).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(801).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(998).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(999).getValue().toDec());
+  EXPECT_THROW(m_memory.m_memory.at(1000).getValue().toDec(), out_of_range);
 }
 
 TEST_F(MemoryTest, InitializeMemoryPointerProperly) {
@@ -87,19 +89,19 @@ TEST_F(MemoryTest, MemoryPointerIsSetToCorrectPosition) {
 }
 
 TEST_F(MemoryTest, MemoryPointerSetterWorksOnPositionWherePointerIsSet) {
-  m_memoryPointers.at(0)->setValue(Value{alias::Decimal{"1"}});
-  m_memoryPointers.at(1)->setValue(Value{alias::Decimal{"1"}});
-  m_memoryPointers.at(2)->setValue(Value{alias::Decimal{"1"}});
+  m_memoryPointers.at(0)->setValue(Value{Decimal{"1"}});
+  m_memoryPointers.at(1)->setValue(Value{Decimal{"1"}});
+  m_memoryPointers.at(2)->setValue(Value{Decimal{"1"}});
 
-  EXPECT_THROW(m_memory.m_memory.at(-1).getValue().toDec(), std::out_of_range);
-  EXPECT_EQ(alias::Decimal{"1"}, m_memory.m_memory.at(0).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(1).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(99).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"1"}, m_memory.m_memory.at(100).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(101).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(499).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"1"}, m_memory.m_memory.at(500).getValue().toDec());
-  EXPECT_EQ(alias::Decimal{"0"}, m_memory.m_memory.at(501).getValue().toDec());
+  EXPECT_THROW(m_memory.m_memory.at(-1).getValue().toDec(), out_of_range);
+  EXPECT_EQ(Decimal{"1"}, m_memory.m_memory.at(0).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(1).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(99).getValue().toDec());
+  EXPECT_EQ(Decimal{"1"}, m_memory.m_memory.at(100).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(101).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(499).getValue().toDec());
+  EXPECT_EQ(Decimal{"1"}, m_memory.m_memory.at(500).getValue().toDec());
+  EXPECT_EQ(Decimal{"0"}, m_memory.m_memory.at(501).getValue().toDec());
 }
 
 } // namespace memory

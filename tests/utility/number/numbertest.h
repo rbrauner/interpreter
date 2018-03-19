@@ -1,11 +1,7 @@
 #pragma once
 
-#include "utility/number/number.h"
+#include "alias/number.h"
 #include "gtest/gtest.h"
-#include <memory>
-
-using std::shared_ptr;
-using utility::number::Number;
 
 namespace utility {
 namespace number {
@@ -15,13 +11,13 @@ public:
   NumberTest();
 
 protected:
-  shared_ptr<Number> bin;
-  shared_ptr<Number> dec;
-  shared_ptr<Number> hex;
+  alias::NumberPointer bin;
+  alias::NumberPointer dec;
+  alias::NumberPointer hex;
 
-  shared_ptr<Number> negativeBin;
-  shared_ptr<Number> negativeDec;
-  shared_ptr<Number> negativeHex;
+  alias::NumberPointer negativeBin;
+  alias::NumberPointer negativeDec;
+  alias::NumberPointer negativeHex;
 };
 
 } // namespace number

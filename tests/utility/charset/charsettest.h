@@ -3,8 +3,6 @@
 #include "utility/charset/charset.h"
 #include "gtest/gtest.h"
 
-using utility::charset::CharSet;
-
 namespace utility {
 namespace charset {
 

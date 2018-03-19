@@ -1,16 +1,19 @@
 #include "valuetest.h"
 #include "alias/number.h"
 
+using alias::Binary;
+using alias::Decimal;
+using alias::Hexadecimal;
 using brainfuck::memory::address::Value;
 using brainfuck::memory::address::ValueTest;
 
-ValueTest::ValueTest() : m_value{alias::Decimal{20}} {}
+ValueTest::ValueTest() : m_value{Decimal{20}} {}
 
 TEST_F(ValueTest, InitializeProperlyWithDefaultMinAndMax) {
   try {
-    Value binDefault{alias::Binary{"1010"}};
-    Value decDefault{alias::Decimal{10}};
-    Value hexDefault{alias::Hexadecimal{"a"}};
+    Value binDefault{Binary{"1010"}};
+    Value decDefault{Decimal{10}};
+    Value hexDefault{Hexadecimal{"a"}};
 
     EXPECT_LE(INT8_MIN, stoi(binDefault.toDec().getValue()));
     EXPECT_LE(INT8_MIN, stoi(decDefault.toDec().getValue()));
@@ -26,12 +29,9 @@ TEST_F(ValueTest, InitializeProperlyWithDefaultMinAndMax) {
 
 TEST_F(ValueTest, InitializeProperlyWithCorrectMinAndMax) {
   try {
-    Value minusTenToMinusFive{alias::Decimal{-7}, alias::Decimal{-10},
-                              alias::Decimal{-5}};
-    Value minusFiveToTen{alias::Decimal{2}, alias::Decimal{-5},
-                         alias::Decimal{10}};
-    Value fiveToTwentyFive{alias::Decimal{14}, alias::Decimal{5},
-                           alias::Decimal{25}};
+    Value minusTenToMinusFive{Decimal{-7}, Decimal{-10}, Decimal{-5}};
+    Value minusFiveToTen{Decimal{2}, Decimal{-5}, Decimal{10}};
+    Value fiveToTwentyFive{Decimal{14}, Decimal{5}, Decimal{25}};
 
     EXPECT_LE(-10, stoi(minusTenToMinusFive.toDec().getValue()));
     EXPECT_LE(-5, stoi(minusFiveToTen.toDec().getValue()));
@@ -47,7 +47,7 @@ TEST_F(ValueTest, InitializeProperlyWithCorrectMinAndMax) {
 
 TEST_F(ValueTest, ReportsErrorDuringInitializationWithMinEqualToMax) {
   try {
-    Value minEqualsMax{alias::Decimal{2}, alias::Decimal{1}, alias::Decimal{1}};
+    Value minEqualsMax{Decimal{2}, Decimal{1}, alias::Decimal{1}};
     FAIL();
   } catch (...) {
   }
@@ -55,8 +55,7 @@ TEST_F(ValueTest, ReportsErrorDuringInitializationWithMinEqualToMax) {
 
 TEST_F(ValueTest, ReportsErrorDuringInitializationWithMinGreaterThanMax) {
   try {
-    Value minGreaterThanMax{alias::Decimal{1}, alias::Decimal{2},
-                            alias::Decimal{0}};
+    Value minGreaterThanMax{Decimal{1}, Decimal{2}, Decimal{0}};
     FAIL();
   } catch (...) {
   }
@@ -64,8 +63,7 @@ TEST_F(ValueTest, ReportsErrorDuringInitializationWithMinGreaterThanMax) {
 
 TEST_F(ValueTest, ReportsErrorDuringInitializationWithValueLesserThanMin) {
   try {
-    Value valueLesserThanMin{alias::Decimal{-1}, alias::Decimal{0},
-                             alias::Decimal{2}};
+    Value valueLesserThanMin{Decimal{-1}, Decimal{0}, Decimal{2}};
     FAIL();
   } catch (...) {
   }
@@ -73,15 +71,14 @@ TEST_F(ValueTest, ReportsErrorDuringInitializationWithValueLesserThanMin) {
 
 TEST_F(ValueTest, ReportsErrorDuringInitializationWithValueGreaterThanMax) {
   try {
-    Value valueGreaterThanMax{alias::Decimal{3}, alias::Decimal{0},
-                              alias::Decimal{2}};
+    Value valueGreaterThanMax{Decimal{3}, Decimal{0}, Decimal{2}};
     FAIL();
   } catch (...) {
   }
 }
 
 TEST_F(ValueTest, GettersWork) {
-  EXPECT_EQ(alias::Binary{"10100"}, m_value.toBin());
-  EXPECT_EQ(alias::Decimal{20}, m_value.toDec());
-  EXPECT_EQ(alias::Hexadecimal{"14"}, m_value.toHex());
+  EXPECT_EQ(Binary{"10100"}, m_value.toBin());
+  EXPECT_EQ(Decimal{20}, m_value.toDec());
+  EXPECT_EQ(Hexadecimal{"14"}, m_value.toHex());
 }
