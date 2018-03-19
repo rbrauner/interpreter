@@ -10,7 +10,7 @@ namespace address {
 
 class Address {
 public:
-  Address(Position position, Value value = Value{alias::Decimal{"0"}});
+  explicit Address(Position position, Value value = Value{alias::Decimal{"0"}});
 
   Position getPosition() const;
   Value getValue() const;

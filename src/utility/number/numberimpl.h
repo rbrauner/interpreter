@@ -9,7 +9,7 @@ namespace number {
 
 class NumberImpl : public Number {
 public:
-  NumberImpl(charset::CharSet charSet);
+  explicit NumberImpl(charset::CharSet charSet);
   ~NumberImpl() override = 0;
 
   std::string getValue() const override = 0;

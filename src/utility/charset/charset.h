@@ -8,8 +8,8 @@ namespace charset {
 
 class CharSet {
 public:
-  CharSet(std::initializer_list<char> charSet);
-  CharSet(std::string charSet);
+  explicit CharSet(std::initializer_list<char> charSet);
+  explicit CharSet(std::string charSet);
 
   void setCharSet(std::initializer_list<char> charSet);
   void setCharSet(std::string charSet);

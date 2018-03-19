@@ -8,25 +8,30 @@ namespace interpreter {
 
 template <typename T>
 class Interpreter : public ::interpreter::interpreter::Interpreter<T> {
-public:
   using InstructionsBufferReference =
-      std::reference_wrapper<::interpreter::instruction::InstructionsBuffer<T>>;
+      ::interpreter::instruction::InstructionsBuffer<T> &;
+  using ConstInstructionsBufferReference = const InstructionsBufferReference;
 
+public:
   static void interpret(const InstructionsBufferReference instructions);
 
-  Interpreter() {}
-  Interpreter(InstructionsBufferReference instructions) {}
+  explicit Interpreter() {}
+  explicit Interpreter(InstructionsBufferReference instructions) {}
 
-  Interpreter(std::istream &istream, std::ostream &ostream = std::cout) {}
-  Interpreter(InstructionsBufferReference instructions, std::istream &istream,
-              std::ostream &ostream = std::cout) {}
+  explicit Interpreter(std::istream &istream,
+                       std::ostream &ostream = std::cout) {}
+  explicit Interpreter(InstructionsBufferReference instructions,
+                       std::istream &istream,
+                       std::ostream &ostream = std::cout) {}
 
-  Interpreter(std::ostream &ostream, std::istream &istream = std::cin) {}
-  Interpreter(InstructionsBufferReference instructions, std::ostream &ostream,
-              std::istream &istream = std::cin) {}
+  explicit Interpreter(std::ostream &ostream,
+                       std::istream &istream = std::cin) {}
+  explicit Interpreter(InstructionsBufferReference instructions,
+                       std::ostream &ostream,
+                       std::istream &istream = std::cin) {}
 
-  void
-  addInstructions(const InstructionsBufferReference instructions) override {}
+  void addInstructions(ConstInstructionsBufferReference instructions) override {
+  }
   void interpret(int howMany) override {}
   void convert(int howMany) override {}
   void execute() override {}

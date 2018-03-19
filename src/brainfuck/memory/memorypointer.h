@@ -8,7 +8,7 @@ namespace memory {
 
 class MemoryPointer : public std::vector<address::Address>::iterator {
 public:
-  MemoryPointer(Memory &memory, std::uint32_t position = 0);
+  explicit MemoryPointer(Memory &memory, std::uint32_t position = 0);
 };
 
 } // namespace memory

@@ -1,91 +1,92 @@
 #include "value.h"
-#include "brainfuck/memory/address/exceptions.h"
+#include "exceptions.h"
 
+using alias::Binary;
+using alias::Decimal;
+using alias::Hexadecimal;
 using brainfuck::memory::address::Value;
+using brainfuck::memory::address::exception::MinEqualToMax;
+using brainfuck::memory::address::exception::MinGreaterThanMax;
+using brainfuck::memory::address::exception::OutOfRange;
 using std::make_shared;
 using std::string;
+using utility::number::binaryToDecimal;
+using utility::number::binaryToHexadecimal;
 using utility::number::decimalToBinary;
+using utility::number::decimalToHexadecimal;
+using utility::number::hexadecimalToBinary;
+using utility::number::hexadecimalToDecimal;
 
-Value::Value(alias::Binary value, alias::Binary min, alias::Binary max)
-    : m_value{make_shared<alias::Binary>(value)}, type{"Binary"} {
+Value::Value(Binary value, Binary min, Binary max)
+    : m_value{make_shared<Binary>(value)}, type{"Binary"} {
   if (min == max)
-    throw exception::MinEqualToMax{};
+    throw MinEqualToMax{};
   else if (min > max)
-    throw exception::MinGreaterThanMax{};
+    throw MinGreaterThanMax{};
   else if (value < min || value > max)
-    throw exception::OutOfRange{};
+    throw OutOfRange{};
 }
 
-#include <iostream>
-
-Value::Value(alias::Decimal value, alias::Decimal min, alias::Decimal max)
-    : m_value{make_shared<alias::Decimal>(value)}, type{"Decimal"} {
-  std::cout << min.getValue() << ' ' << max.getValue() << ' '
-            << value.getValue() << std::endl;
+Value::Value(Decimal value, Decimal min, Decimal max)
+    : m_value{make_shared<Decimal>(value)}, type{"Decimal"} {
   if (min == max)
-    throw exception::MinEqualToMax{};
+    throw MinEqualToMax{};
   else if (min > max)
-    throw exception::MinGreaterThanMax{};
+    throw MinGreaterThanMax{};
   else if (value < min || value > max)
-    throw exception::OutOfRange{};
+    throw OutOfRange{};
 }
 
-Value::Value(alias::Hexadecimal value, alias::Hexadecimal min,
-             alias::Hexadecimal max)
-    : m_value{make_shared<alias::Hexadecimal>(value)}, type{"Hexadecimal"} {
+Value::Value(Hexadecimal value, Hexadecimal min, Hexadecimal max)
+    : m_value{make_shared<Hexadecimal>(value)}, type{"Hexadecimal"} {
   if (min == max)
-    throw exception::MinEqualToMax{};
+    throw MinEqualToMax{};
   else if (min > max)
-    throw exception::MinGreaterThanMax{};
+    throw MinGreaterThanMax{};
   else if (value < min || value > max)
-    throw exception::OutOfRange{};
+    throw OutOfRange{};
 }
 
-alias::Binary Value::toBin() const {
-  alias::Binary bin{"0"};
+Binary Value::toBin() const {
+  Binary bin{"0"};
 
   if (type.name == "Binary") {
     bin.setValue(m_value->getValue());
   } else if (type.name == "Decimal") {
-    alias::Binary binary{utility::number::decimalToBinary(m_value->getValue())};
+    Binary binary{decimalToBinary(Decimal{m_value->getValue()})};
     bin.setValue(binary.getValue());
   } else if (type.name == "Hexadecimal") {
-    alias::Binary binary{
-        utility::number::hexadecimalToBinary(m_value->getValue())};
+    Binary binary{hexadecimalToBinary(Hexadecimal{m_value->getValue()})};
     bin.setValue(binary.getValue());
   }
 
   return bin;
 }
 
-alias::Decimal Value::toDec() const {
-  alias::Decimal dec{"0"};
+Decimal Value::toDec() const {
+  Decimal dec{"0"};
 
   if (type.name == "Binary") {
-    alias::Decimal decimal{
-        utility::number::binaryToDecimal(m_value->getValue())};
+    Decimal decimal{binaryToDecimal(Binary{m_value->getValue()})};
     dec.setValue(decimal.getValue());
   } else if (type.name == "Decimal") {
     dec.setValue(m_value->getValue());
   } else if (type.name == "Hexadecimal") {
-    alias::Decimal decimal{
-        utility::number::hexadecimalToDecimal(m_value->getValue())};
+    Decimal decimal{hexadecimalToDecimal(Hexadecimal{m_value->getValue()})};
     dec.setValue(decimal.getValue());
   }
 
   return dec;
 }
 
-alias::Hexadecimal Value::toHex() const {
-  alias::Hexadecimal hex{"0"};
+Hexadecimal Value::toHex() const {
+  Hexadecimal hex{"0"};
 
   if (type.name == "Binary") {
-    alias::Hexadecimal hexadecimal{
-        utility::number::binaryToHexadecimal(m_value->getValue())};
+    Hexadecimal hexadecimal{binaryToHexadecimal(Binary{m_value->getValue()})};
     hex.setValue(hexadecimal.getValue());
   } else if (type.name == "Decimal") {
-    alias::Hexadecimal hexadecimal{
-        utility::number::decimalToHexadecimal(m_value->getValue())};
+    Hexadecimal hexadecimal{decimalToHexadecimal(Decimal{m_value->getValue()})};
     hex.setValue(hexadecimal.getValue());
   } else if (type.name == "Hexadecimal") {
     hex.setValue(m_value->getValue());

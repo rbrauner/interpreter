@@ -10,11 +10,14 @@ include(pthread.pri)
 INCLUDEPATH += src
 
 HEADERS += \
+    src/alias/common.h \
     src/alias/number.h \
     src/brainfuck/instruction/instruction.h \
     src/brainfuck/interpreter/interpreter.h \
     src/brainfuck/memory/address/address.h \
+    src/brainfuck/memory/address/exceptions.h \
     src/brainfuck/memory/address/position.h \
+    src/brainfuck/memory/address/type.h \
     src/brainfuck/memory/address/value.h \
     src/brainfuck/memory/memory.h \
     src/brainfuck/memory/memorypointer.h \
@@ -25,18 +28,15 @@ HEADERS += \
     src/utility/charset/exceptions.h \
     src/utility/number/binary.h \
     src/utility/number/decimal.h \
+    src/utility/number/exceptions.h \
     src/utility/number/hexadecimal.h \
     src/utility/number/number.h \
     src/utility/number/numberimpl.h \
     tests/brainfuck/memory/address/addresstest.h \
+    tests/brainfuck/memory/address/valuetest.h \
     tests/brainfuck/memory/memorytest.h \
     tests/utility/charset/charsettest.h \
-    tests/utility/number/numbertest.h \
-    tests/brainfuck/memory/address/valuetest.h \
-    src/alias/common.h \
-    src/brainfuck/memory/address/type.h \
-    src/brainfuck/memory/address/exceptions.h \
-    src/utility/number/exceptions.h
+    tests/utility/number/numbertest.h
 
 SOURCES += \
     src/brainfuck/instruction/instruction.cpp \
@@ -53,7 +53,7 @@ SOURCES += \
     src/utility/number/number.cpp \
     src/utility/number/numberimpl.cpp \
     tests/brainfuck/memory/address/addresstest.cpp \
+    tests/brainfuck/memory/address/valuetest.cpp \
     tests/brainfuck/memory/memorytest.cpp \
     tests/utility/charset/charsettest.cpp \
-    tests/utility/number/numbertest.cpp \
-    tests/brainfuck/memory/address/valuetest.cpp
+    tests/utility/number/numbertest.cpp

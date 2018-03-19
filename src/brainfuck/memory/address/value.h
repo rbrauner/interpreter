@@ -2,7 +2,6 @@
 
 #include "alias/number.h"
 #include "brainfuck/memory/address/type.h"
-#include <cstdint>
 
 namespace brainfuck {
 namespace memory {
@@ -10,14 +9,15 @@ namespace address {
 
 class Value {
 public:
-  Value(alias::Binary value, alias::Binary min = alias::Binary{"-1111111"},
-        alias::Binary max = alias::Binary{"1111111"});
-  Value(alias::Decimal value,
-        alias::Decimal min = alias::Decimal{std::to_string(INT8_MIN)},
-        alias::Decimal max = alias::Decimal{std::to_string(INT8_MAX)});
-  Value(alias::Hexadecimal value,
-        alias::Hexadecimal min = alias::Hexadecimal{"-80"},
-        alias::Hexadecimal max = alias::Hexadecimal{"7f"});
+  explicit Value(alias::Binary value,
+                 alias::Binary min = alias::Binary{"-1111111"},
+                 alias::Binary max = alias::Binary{"1111111"});
+  explicit Value(alias::Decimal value,
+                 alias::Decimal min = alias::Decimal{std::to_string(INT8_MIN)},
+                 alias::Decimal max = alias::Decimal{std::to_string(INT8_MAX)});
+  explicit Value(alias::Hexadecimal value,
+                 alias::Hexadecimal min = alias::Hexadecimal{"-80"},
+                 alias::Hexadecimal max = alias::Hexadecimal{"7f"});
 
   alias::Binary toBin() const;
   alias::Decimal toDec() const;

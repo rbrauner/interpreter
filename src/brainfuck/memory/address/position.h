@@ -8,9 +8,9 @@ namespace address {
 
 class Position {
 public:
-  Position(alias::Binary position);
-  Position(alias::Decimal position);
-  Position(alias::Hexadecimal position);
+  explicit Position(alias::Binary position);
+  explicit Position(alias::Decimal position);
+  explicit Position(alias::Hexadecimal position);
 
   alias::Binary toBin() const;
   alias::Decimal toDec() const;

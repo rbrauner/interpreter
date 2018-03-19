@@ -1,19 +1,18 @@
 #pragma once
 
 #include "interpreter/instruction/instructionsbuffer.h"
-#include <memory>
 
 namespace interpreter {
 namespace interpreter {
 
 template <typename T> class Interpreter {
-public:
-  using InstructionsBufferReference =
-      std::reference_wrapper<instruction::InstructionsBuffer<T>>;
+  using InstructionsBufferReference = instruction::InstructionsBuffer<T> &;
+  using ConstInstructionsBufferReference = const InstructionsBufferReference;
 
+public:
   virtual ~Interpreter() = 0;
   virtual void
-  addInstructions(const InstructionsBufferReference instructions) = 0;
+  addInstructions(ConstInstructionsBufferReference instructions) = 0;
   virtual void interpret(int howMany) = 0;
   virtual void convert(int howMany) = 0;
   virtual void execute() = 0;

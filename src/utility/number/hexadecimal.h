@@ -10,7 +10,7 @@ class Decimal;
 
 class Hexadecimal : public NumberImpl {
 public:
-  Hexadecimal(std::string value);
+  explicit Hexadecimal(std::string value);
 
   bool operator==(const Hexadecimal &hexadecimal) const;
   bool operator<(const Hexadecimal &hexadecimal) const;

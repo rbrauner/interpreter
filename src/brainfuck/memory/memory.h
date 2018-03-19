@@ -9,7 +9,7 @@ namespace memory {
 
 class Memory {
 public:
-  Memory(std::uint32_t size);
+  explicit Memory(std::uint32_t size);
 
   void clear();
 

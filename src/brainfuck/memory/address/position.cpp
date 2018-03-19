@@ -1,26 +1,30 @@
 #include "position.h"
 
+using alias::Binary;
+using alias::Decimal;
+using alias::Hexadecimal;
 using brainfuck::memory::address::Position;
 using std::make_shared;
+using std::string;
 
-Position::Position(alias::Binary position)
-    : m_position{make_shared<alias::Binary>(position)} {}
+Position::Position(Binary position)
+    : m_position{make_shared<Binary>(position)} {}
 
-Position::Position(alias::Decimal position)
-    : m_position{make_shared<alias::Decimal>(position)} {}
+Position::Position(Decimal position)
+    : m_position{make_shared<Decimal>(position)} {}
 
-Position::Position(alias::Hexadecimal position)
-    : m_position{make_shared<alias::Hexadecimal>(position)} {}
+Position::Position(Hexadecimal position)
+    : m_position{make_shared<Hexadecimal>(position)} {}
 
-alias::Decimal Position::toDec() const {
-  std::string value = m_position->getValue();
-  alias::Decimal dec{value};
+Decimal Position::toDec() const {
+  string value = m_position->getValue();
+  Decimal dec{value};
   return dec;
 }
 
-alias::Hexadecimal Position::toHex() const {
-  std::string value = m_position->getValue();
-  alias::Hexadecimal hex{value};
+Hexadecimal Position::toHex() const {
+  string value = m_position->getValue();
+  Hexadecimal hex{value};
   return hex;
 }
 
