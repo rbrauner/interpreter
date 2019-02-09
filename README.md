@@ -1,7 +1,5 @@
 # interpreter
 
-# interpreter
-
 Interpreter for programming languages such as Brainfuck, COW, Chef etc.
 
 ## Getting Started
@@ -38,4 +36,4 @@ https://trello.com/b/YH86OmRq/interpreter
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
