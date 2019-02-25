@@ -28,7 +28,7 @@ Build project and run executable(temporary).
 
 ## Trello board
 
-https://trello.com/b/YH86OmRq/interpreter
+https://trello.com/b/YH86OmRq
 
 ## Authors
 
